@@ -1,0 +1,64 @@
+<div class="modal fade" id="checkoutModal" tabindex="-1" role="dialog" aria-labelledby="checkoutModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header border2">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                </button>
+            </div>            
+            <div class="modal-body border2">
+              <form action="/charge" method="POST" id="payment-form" ng-submit="submitPayment($event)"> 
+                <span class="payment-errors alert alert-danger hidden"></span>
+                <div class="form-row">
+                  <label>
+                    <span>Total</span>
+                    <p ng-model="totalCost"></p>
+                    <p>{{totalCost}}</p>
+                     <input type="hidden" name="price" value="{{totalCost}}")
+                  </label>
+                </div>
+                <div class="form-row">
+                  <label>
+                    <span>Name</span>
+                    <input type="text" size="20" data-stripe="name" name="name" required>
+                  </label>
+                </div>
+                <div class="form-row">
+                  <label>
+                    <span>Address</span>
+                    <input type="text" size="20" data-stripe="address_line1" name="address" required>
+                  </label>
+                </div>
+                <div class="form-row">
+                  <label>
+                    <span>Card Number</span>
+                    <input type="text" size="20" data-stripe="number" required>
+                  </label>
+                </div>
+
+                <div class="form-row">
+                  <label>
+                    <span>Expiration (MM/YY)</span>
+                    <input type="text" size="2" data-stripe="exp_month" required>
+                  </label>
+                  <span> / </span>
+                  <input type="text" size="2" data-stripe="exp_year" required>
+                </div>
+
+                <div class="form-row">
+                  <label>
+                    <span>CVC</span>
+                    <input type="text" size="4" data-stripe="cvc" required>
+                  </label>
+                </div>
+
+
+                <input type="submit" class="submit" value="Submit Payment">
+              </form>
+            </div>
+            <div class="modal-footer border2">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,131 @@
+.blogDiv{
+	position: relative;
+	top:12vh;
+	height: auto;
+	padding: 3%;
+	.blogDiv_card{
+		padding: 3% 10%;
+		height:auto;
+		margin-bottom: 20px;
+		.blogDiv_title{
+			p{
+				font-size: 30px;
+				text-align: center;
+				font-weight: 100;
+			}
+			
+		}
+		.blogDiv_date{
+			p{
+				font-size: 14px;
+				text-align: center;
+				letter-spacing: 1.5px;
+			}
+		}
+		.blog_underline{
+
+	    	width: 30%;
+		    display: block;
+		    margin: auto;
+		    border-top: 1px solid rgba(51, 51, 51, 0.4);
+		    margin-top: 2vh;
+		}
+		.blogDiv_content{
+			p{
+				font-size: 18px;
+				padding:3% 5%;
+				text-indent: 30px;
+			}
+		}
+		.blogDiv_footer{
+
+		}
+
+	}
+
+}
+
+
+
+/*.blogDiv{
+	padding: 100px 150px;
+	overflow-y: scroll;
+	position: absolute;
+    top: 12vh;
+    
+	.blogCard{
+	  height:auto;
+	  min-height: 300px;
+	  margin-bottom: 20px;
+	  background-color: #eee;
+	  box-shadow: 0px 5px 44px -20px rgba(0, 0, 0, 0.51);
+	  overflow: hidden;
+	  transition: height 500ms linear;
+	  	padding: 35px 75px;
+    	text-align: justify;
+    	line-height: 1.75;
+
+	}
+	.blogTitle{
+	  height: 32%;
+	  max-height: 96px;
+	  border-bottom: 1px solid #87CEEB;
+		  h1{
+		  	margin-top: 10px;
+		  	text-align: center;
+		  }
+	}
+	.blogDate{
+		position: absolute;
+		top: 76;
+		right: 0;
+		height: 35px;
+		background-color: #C7C2C2;
+		z-index: 1;
+    	border-radius: 2px;
+    	max-width: 200px;
+			h4{
+				font-weight:300;
+				text-align: right;
+			}
+	}
+
+	.blogContent{
+		font-family: $font-stack-open;
+		font-weight: 300;
+		height: auto;
+		line-height: 1.8;
+	    padding: 30px 20px;
+	    font-size: 18px;
+	    overflow: hidden;
+	    p{
+	    	height:auto;
+	    	text-indent: 30pt;
+	    }
+	}
+	.heightAuto{
+		height: auto;
+		transition: height 500ms linear;
+	}
+	.expand-btn{
+		position: absolute;
+	    bottom: 0;
+	    right: 0;
+	    z-index: 1;
+	    border: none;
+    	background-color: transparent;
+    	color:#87CEEB;
+
+    	&:hover{
+    		font-size: 18px;
+    	}
+    	&:focus{
+    		border:none;
+			outline:none;
+			box-shadow: none;
+    	}
+
+
+
+	}
+}*/

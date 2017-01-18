@@ -1,0 +1,48 @@
+@import "partials/base";
+@import "partials/navBar";
+@import "partials/mainHeader";
+@import "partials/hmainHeader";
+@import "partials/mainBody";
+@import "partials/blog";
+@import "partials/admin";
+@import "partials/store";
+@import "partials/about";
+@import "partials/shopMenu";
+@import "partials/mainBodyNav";
+@import "partials/productModal";
+@import "partials/cart";
+@import "partials/carousel";
+@import "partials/temp";
+@import "partials/product";
+@import "partials/mediaQ/temp";
+@import "partials/mediaQ/navBar";  
+@import "partials/login";  
+
+body{
+	background-color: $bg-color;
+  	font-family: $font-stack-roboto, sans-serif;
+  	color: $text-color;
+  	height: auto; 
+  	/*overflow: hidden;*/
+}
+
+::-webkit-scrollbar { 
+    display: none; 
+}
+/*//////////////////////////////////////*/
+/*///// borders /////// */
+.border {
+  border: 2px dotted black; }
+
+.border2 {
+  border: 2px solid red; }
+
+.border3 {
+  border: 2px solid yellow; }
+
+.border4 {
+  border: 2px solid white; }
+
+.border5 {
+  border: 2px solid red; }
+

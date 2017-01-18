@@ -1,0 +1,231 @@
+/*.temp_nav{
+	position: fixed;
+	top: 0;
+	height: auto;
+	min-height: 12vh;
+	max-height: 12vh;
+	padding: 0 3%;
+	background-color: red;
+	z-index: 12;
+}
+*/.temp_main_body{
+	height: auto;
+    min-height: 85vh;
+    max-height: 85vh;
+    padding: 0 3%;
+    overflow: hidden;
+    top:12vh;
+    z-index: 10;
+    background-color:#eee;
+
+    .temp_main_cols{
+    	background-color:#eee;
+    	height: 85vh;
+    	/*line-height: 85vh;*/
+    		.blogImg{
+    			top:-32px;
+    			position: relative;
+    		}
+    		 
+    		.temp_main_blog_title{
+    			/*position: absolute;
+    			height: 25%;
+			    line-height: 1;
+			    top: 10%;
+			    color: $bg-color;
+			    padding: 2% 3%;*/
+			    width: 85%;
+			    height: 10%;
+			    display: block;
+			    position: relative;
+			    top: 50px;
+			    padding: 0 3%;
+			    color: $bg-color;
+			    font-weight: bold;
+			    z-index: 2;
+			    p{
+			    	margin: 0;
+			    }
+			     .temp_main_subtitle{
+				    	font-weight: 100;
+				    	font-size: 13px;
+				    }
+    		}
+    		img{
+    			height: auto;
+    			width:100%;
+    			display: block;
+    			margin: auto;
+    			vertical-align: middle;
+    		}
+			.temp_main_products_div{
+				height:42vh;
+				/*line-height: 42vh;*/
+				background-color:#eee;
+				a{
+					text-decoration: none;
+					outline: none;
+				}
+				.temp_main_products_title{
+					/*position: absolute;
+	    			height: 25%;
+				    line-height: 1;
+				    top: 10%;
+				    color: $bg-color;
+				    padding: 5% 3%;*/
+				    width: 85%;
+				    height: 10%;
+				    display: block;
+				    position: relative;
+				    top: 40px;
+				    padding: 0 3%;
+				    color: $bg-color;
+				    font-weight: bold;
+				    p{
+				    	margin: 0;
+				    }
+				    .temp_main_subtitle{
+				    	font-weight: 100;
+				    	font-size: 13px;
+				    }
+
+				}
+			}
+    	
+    }
+}
+.temp_intro_body{
+	height:auto;
+	position: relative;
+	min-height: 65vh;
+    max-height: 65vh;
+    top: 97px;
+    background-color:$bg-color;
+    text-align: center;
+    padding: 10% 20%;
+	    .temp_intro_body_hi{
+	    	font-weight: bold;
+	    	font-size: 20px;
+	    }
+	    .temp_intro_body_name{
+	    	font-size: 24px;
+	    	font-weight: 100;
+	    		a{
+	    			text-decoration: none;
+	    			color: $text-color;
+	    			cursor: pointer;
+	    		}
+	    }
+	    .temp_intro_body_about{
+	    	font-size: 20px;
+	    	font-weight: 100;
+	    		a{
+	    			font-style: italic;
+	    			text-decoration: none;
+	    			color: $text-color;
+	    			cursor: pointer;
+	    		}
+	    }
+}
+.temp_product_body{
+	height:auto;
+	position: relative;
+	min-height: 105vh;
+    max-height: 250vh;
+    background-color: #eee;
+    padding: 5%;
+    .product_body_div{
+    	margin-bottom:30px;
+    	.product_body_item{
+    		padding: 0;
+    		.product_body_desc{
+    			/*border: 1px solid red;*/
+    			width: 85%;
+    			display: block;
+    			margin: auto;
+    			position: relative;
+			    top: 41px;
+			    border-radius: 5px 5px 0 0;
+			    padding: 0 3%;
+			    /*color: #F4F4F4;*/
+			    /*color: $text-color;*/
+			    color: rgba(52, 52, 52, 0.85);
+			    font-weight: bold;
+
+			    
+    		}
+
+    		
+    		img{
+    			height: auto;
+			    width: 85%;
+			    /*border-radius: 5px;*/
+			    display: block;
+			    margin: auto;
+    		}
+    	}
+    }
+}
+.temp_footer{
+	position: relative;
+	height:auto;
+	min-height: 75vh;
+    max-height: 75vh;
+    background-color:$bg-color;
+    padding: 10% 20%;
+    text-align: center;
+    	.temp_footer_subscribe{
+    		margin-bottom: 20px;
+    		.temp_footer_subscribe_title{
+    			font-weight: bold;
+    			font-size: 25px;
+    		}
+    		.temp_footer_subscribe_subtitle{
+    			font-size: 15px;
+    			font-weight: 100;
+    		}
+    		
+    	}
+    	.temp_footer_signup{
+    			input{
+    				width: 65%;
+    				border-width: 1px;
+    				border-style: solid;
+				    border-color: rgba(0, 0, 0, 0.117647);
+				    outline: none;
+				    height: 50px;
+				    padding: 1em;
+				    font-size: 15px;
+				    letter-spacing: 1.5px;
+				    font-weight: 100;
+				    text-align: left;
+    			}
+    			button{
+    				height: 50px;
+				    width: 15%;
+				    text-transform: uppercase;
+				    color: #f4f4f4;
+				    border-radius: 0;
+				    margin-left: 10px;
+				    background-color: #333333;
+				    outline: none;
+				    font-weight: 100;
+				    .subscribe_check{
+				    	display: none;
+				    }
+				    p{
+				    	display:block;
+				    }
+
+				    &:hover{
+				    	outline:none !important;
+				    	background-color:rgba(51, 51, 51, 0.77);
+				    }
+				   	&:focus{
+				   		outline:none !important;
+				    	background-color:rgba(51, 51, 51, 0.77);
+				   	}
+    			}
+
+    	}
+}

@@ -1,0 +1,39 @@
+<div class="modal fade" id="productModal" tabindex="-1" role="dialog" aria-labelledby="productModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header border2">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                </button>
+            </div>
+            <pre>{{store}}</pre>
+            <pre>{{productModal.title}}</pre>
+
+            
+            <div class="modal-body border2">
+                <div class="imgDiv col-lg-8 col-md-8 col-sm-8 col-xs-8 border">
+                    <div class="displayImg col-lg-12 col-md-12 col-sm-12 col-xs-12 border2 thumbnail">
+                        <!-- <img ng-src="{{productInfo.url}}"> -->
+                        <img class="col-lg-12 col-md-12 col-sm-12 col-xs-12 border" src="..." alt="...">
+                    </div>
+                    <div class="subImg col-lg-12 col-md-12 col-sm-12 col-xs-12 border2 thumbnail">
+                            <img class="col-lg-4 col-md-4 col-sm-4 col-xs-4 border" src="..." alt="...">
+                            <img class="col-lg-4 col-md-4 col-sm-4 col-xs-4 border"  src="..." alt="...">
+                            <img class="col-lg-4 col-md-4 col-sm-4 col-xs-4 border"  src="..." alt="...">
+                    </div>
+                </div>
+                <div class="contentDiv col-lg-4 col-md-4 col-sm-4 col-xs-4 border">
+                    <div class="contentDiv_title col-lg-12 col-md-12 col-sm-12 col-xs-12 border2">
+                        <h1>Cafe Con Leche</h1>
+                        <h1>{{item.title}}</h1>
+                    </div>
+                    <div class="contentDiv_price col-lg-12 col-md-12 col-sm-12 col-xs-12 border2">$44.00</div>
+                    <div class="contentDiv_desc col-lg-12 col-md-12 col-sm-12 col-xs-12 border2">"This striking black and tan 20-inch Necklace and 9-inch Bracelet set is a sophisticated choice for the office or dinner out. Classic round and textured glass beads paired with black and silver crystals can be worn with a t-shirt or suit. Smaller beads and dangles add a feminine touch to the matching earrings and silver findings. This is an easy style and elegantly simple design and will be your favorite. Add to a little black dress and stir! No need for sugar...it's already sweet!"</div>
+                </div>
+            </div>
+            <div class="modal-footer border2">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" ng-click="vm.addToCart(image.$id)">ADD TO CART</button>
+            </div>
+        </div>
+    </div>
+</div>

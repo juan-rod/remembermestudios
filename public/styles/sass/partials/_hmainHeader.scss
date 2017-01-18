@@ -1,0 +1,71 @@
+.hmainHeader{
+	height: auto;
+    min-height: 400px;
+    max-height: 75vh;
+    padding: 0 0;
+    overflow: hidden;
+    top: -20px;
+    position: relative;
+    box-shadow: 0px 5px 10px 0px rgba(5,5,5,0.23);
+        -moz-box-shadow: 0px 5px 10px 0px rgba(5,5,5,0.23);
+        -webkit-box-shadow: 0px 5px 10px 0px rgba(5,5,5,0.23);
+    img{
+    	height:auto;
+    	width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+    }
+    .logo{
+        font-family: $font-stack-roboto;
+        /*font-family: $font-stack-dancing;*/
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        top: 0;
+        text-align: center;
+        color: white;
+        padding-top: 15%;
+        background-color: rgba(179, 177, 177, 0.35);
+        h1{
+            font-weight: 300;
+            font-size: 100px;
+            text-shadow: 3px 3px 2px rgb(68, 67, 67);
+        }
+    }
+}
+/*.hmain-nav{
+    height:auto;
+    position: absolute;
+    bottom: 125px;
+    .hmain-navDiv{
+        height:auto;
+        display: flex;
+        justify-content: space-around;
+        .hmain-navDivContent{
+            height: 225px;
+            width: 250px; 
+            border-radius:15px;
+            background-color:rgba(96, 145, 144, 0.95); 
+            padding-top:15%;
+            box-shadow: 0px 4px 28px -4px rgba(0,0,0,0.75);
+                -webkit-box-shadow: 0px 4px 28px -4px rgba(0,0,0,0.75);
+                -moz-box-shadow: 0px 4px 28px -4px rgba(0,0,0,0.75);
+
+            h1{
+                text-align: center;
+                font-size: 55px;
+                font-weight: 300;
+                color: white;
+                text-shadow: 1px 1px 1px rgb(68, 67, 67);
+            }
+            &:hover{
+                cursor: pointer;
+                box-shadow: 0px 4px 28px -2px rgba(0,0,0,0.75);
+                    -webkit-box-shadow: 0px 4px 28px -2px rgba(0,0,0,0.75);
+                    -moz-box-shadow: 0px 4px 28px -2px rgba(0,0,0,0.75);
+            }
+        }
+    }
+}*/
+

@@ -1,0 +1,114 @@
+.pDiv{
+	height:auto;
+	min-height: 100vh;
+    max-height: 100vh;
+    padding: 0 3%;
+    overflow: hidden;
+    top:12vh;
+    z-index: 10;
+
+	.pDiv_previousBtn{
+		height: 8vh;
+		line-height: 8vh;
+		padding-left: 3%;
+		a{
+			text-decoration: none;
+			color: rgba(52, 52, 52, 0.50);
+			i{
+				font-size: 30px;
+			}
+			&:hover{
+				color: rgba(52, 52, 52, 0.85);
+			}
+		}
+	}
+	.pDiv_container{
+		height: auto;
+	
+		.pDiv_images_container{
+			.pDiv_mainImg{
+				height: auto;
+				padding: 0;
+				img{
+					height: auto;
+				    width: 100%;
+				    /*border-radius: 5px;*/
+				    display: block;
+				    margin: auto;
+				}
+			}
+			.pDiv_subImg{
+				height: auto;
+				margin-top: 8%;
+				.subImg1{
+					height: 15vh;
+
+					img{
+					height: auto;
+				    width: 100%;
+				    /*border-radius: 5px;*/
+				    display: block;
+				    margin: auto;
+					}
+				}
+			}
+		}
+		.pDiv_desc_container{
+			height: auto;
+			text-align: right;
+			.pDiv_des_title{
+				height: auto;
+				p{
+					font-size: 32px;
+					font-weight: bold;
+				}
+			}
+			.pDiv_des_price{
+				height: auto;
+				p{
+					font-size: 20px;
+				}	
+			}
+			.pDiv_des_detail{
+				height: auto;
+				padding-left: 15%;
+				p{
+					font-size: 16px;
+				    font-weight: 100;
+				    line-height: 1.6;
+				}
+			}
+			.pDiv_des_btns{
+				height: auto;
+				margin-top: 8%;
+				select{
+				    height: 30px;
+				    width: 50px;
+				    color: black;
+				    background-color: #F4F4F4;
+				}
+				.continueShop{
+					display: block;
+				    text-decoration: none;
+				    color: $text-color;
+				    p{
+						font-size: 12px;
+						display: inline-block;
+    					padding: 10px;
+				    }
+				}
+				.productBtn{
+					border: 1px solid #F4F4F4;
+				    border-radius: 0;
+				    background-color: rgba(52, 52, 52, 0.50);
+				    color: #F4F4F4;
+				    font-weight: 100;
+
+				    &:hover{
+				    	background-color: rgba(52, 52, 52, 0.85);
+				    }
+				}
+			}
+		}
+	}
+}

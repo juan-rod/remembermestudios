@@ -1,0 +1,30 @@
+.modal-dialog{
+	width: 80vw;
+	.modal-content{
+		min-height: 80vh;
+
+		.modal-header{
+			padding: 5px 10px;
+		}
+		.modal-body{
+			height:550px;
+
+			.imgDiv{
+				height: auto;
+				.displayImg{
+					height: 400px;
+					img{
+						height: 100%;
+					}
+				}
+				.subImg{
+					height:100px;
+					img{
+						height:100%;
+					}
+				}
+			}
+
+		}
+	}
+}

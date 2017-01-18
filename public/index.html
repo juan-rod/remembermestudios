@@ -1,0 +1,83 @@
+<!doctype html>
+<html ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+    <script type="text/javascript">
+          Stripe.setPublishableKey('pk_test_3RgM86055Ho32SA6cbslikhr');
+    </script>
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/css/main.css">
+    <link rel="stylesheet" href="styles/font-awesome/css/font-awesome.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,100' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Bad+Script' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="vendor/sweetalert/dist/sweetalert.css">
+    <base href="/">
+    <title>Remember Me</title>
+  </head>
+
+  <body>
+    <div ng-view></div>
+
+
+
+<script src="vendor/firebase/firebase.js"></script>
+<script src="vendor/angular/angular.min.js"></script>
+<script src="vendor/angular-route/angular-route.js"></script>
+<script src="vendor/angular-bootstrap/ui-bootstrap.min.js"></script>
+<script src="vendor/sweetalert/dist/sweetalert.min.js"></script>
+<script src="vendor/ngCart/dist/ngCart.js"></script> 
+<script src="vendor/toastr/toastr.js"></script> 
+<!-- <script src='vendor/angular-resource/angular-resource.min.js'></script> -->
+<script src="vendor/jquery/dist/jquery.min.js"></script>
+<script src="vendor/bootstrap/dist/js/bootstrap.js"></script>
+<script src="vendor/angularfire/dist/angularfire.js"></script>
+ <script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDA_iang1AOjaprtSCZAWbQo6ULmopGKqc",
+    authDomain: "rememberme-4b338.firebaseapp.com",
+    databaseURL: "https://rememberme-4b338.firebaseio.com",
+    storageBucket: "rememberme-4b338.appspot.com",
+    messagingSenderId: "453433540913"
+  };
+  firebase.initializeApp(config);
+  
+</script>
+
+    <script src="data/app.js"></script>
+
+    <script src="data/controllers/main.controller.js"></script>
+    <script src="data/controllers/admin.controller.js"></script>
+    <script src="data/controllers/blog.controller.js"></script>
+    <script src="data/controllers/shop.controller.js"></script>
+    <script src="data/controllers/product.controller.js"></script>
+
+    <script src="data/directives/admin/postBlog.directive.js"></script>
+    <script src="data/directives/admin/addProduct.directive.js"></script>
+    <script src="data/directives/events/customOnChange.directive.js"></script>
+    <script src="data/directives/main/blog.directive.js"></script>
+    <script src="data/directives/main/mainHeader.directive.js"></script>
+    <script src="data/directives/main/mainnav.directive.js"></script>
+    <script src="data/directives/main/mainBodyNav.directive.js"></script>
+    <script src="data/directives/main/mainIntro.directive.js"></script>
+    <script src="data/directives/main/mainProduct.directive.js"></script>
+    <script src="data/directives/main/mainFooter.directive.js"></script>
+    <script src="data/directives/main/shopnav.directive.js"></script>
+    <script src="data/directives/modal/editProductModal.directive.js"></script>
+    <script src="data/directives/modal/checkoutModal.directive.js"></script>
+    <script src="data/directives/modal/productModal.directive.js"></script>
+    
+    <script src="data/services/mvPayment.factory.js"></script>
+   <!-- <script src="data/services/loginNotifier.factory.js"></script>
+    <script src="data/services/mvAuth.factory.js"></script>
+    <script src="data/services/mvUser.factory.js"></script>
+    <script src="data/services/identity.factory.js"></script>-->
+    
+ <!--    
+    <script src="data/directives/navScroll.directive.js"></script>
+    <script src="data/services/dataService.factory.js"></script> -->
+    
+  

@@ -1,0 +1,10 @@
+<main-nav-bar></main-nav-bar>
+<ngcart-cart template-url="vendor/ngCart/template/ngCart/cart.html"></ngcart-cart>
+
+ <hr/>
+
+    <div class="checkoutRow text-right col-lg-12 col-md-12 col-sm-12 col-xs-12">
+       <div class="alert alert-warning" role="alert" ng-show="ngCart.getTotalItems() <= 0">Your cart is empty</div>
+        <button class="btn btn-primary" ng-click="checkout()" ng-show="!ngCart.getTotalItems()">Checkout</button>
+    </div>
+<checkout-modal><checkout-modal>

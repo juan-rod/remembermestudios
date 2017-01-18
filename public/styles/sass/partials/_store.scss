@@ -1,0 +1,114 @@
+.store{
+	font-family: $font-stack-open;
+	position: absolute;
+	top: 150px;
+
+
+
+    .itemDiv{
+    	height:auto;
+    	min-height: 325px;
+    	max-height: 325px;
+    	margin: 0 0 40px;
+    	padding: 0 3%;
+
+    	.productDiv{
+    		a{
+    			text-decoration: none;
+    			color: #000;
+    		}
+	    	/*box-shadow: 0px 5px 44px -20px rgba(0, 0, 0, 0.51);*/
+	    	/*padding: 20px 10px;*/
+	    	padding:0;
+	    	margin-bottom: 20px;
+    		margin-top: 10px;
+    		height: auto;
+    		max-height:325px;
+
+	    	img{
+		    	height: auto;
+		    	width: 100%;
+		    	border-radius:3px;
+	    	}
+	    	.product_name{
+	    		font-family: $font-stack-roboto;
+	    		text-align: center;
+	    		opacity: 0;
+	    		position: absolute;
+			    top: 0;
+			    left: 0;
+			    right: 0;
+			    margin: auto;
+			    color:black;
+			    /*z-index: 6;*/
+			    padding-top:15%;
+			    height: 100%;
+			    background-color: rgba(254, 254, 254, 0.85);
+	    		a{
+	    			h4{
+	    				margin-bottom:20px;
+	    			}
+	    			text-decoration: none;
+	    			color: #000;
+		    		/*&:hover{
+		    			color: #505050;
+		    		}*/
+	    		}
+	    		&:hover{
+	    			/*z-index: 7;*/
+		    		opacity:1;
+		    		cursor: pointer;
+	    			box-shadow: 1px 14px 64px -20px rgba(0, 0, 0, 0.21);
+		    		transition:opacity .5s,box-shadow .3s;
+		    	}
+
+	    	}
+	    	.product_name:hover ~ .u_product_name {
+			    background-color: transparent-;
+			    color: white;
+			}
+	    	.u_product_name{
+	    		/*z-index: 10;*/
+	    		margin-top: 10px;
+	    		.u_product_title{
+	    			font-size: 14px;
+	    			padding:0 6px;
+	    		}
+	    		.u_product_price{
+	    			font-size: 14px;
+	    			padding: 0 6px;
+	    			text-align: right;
+	    		}
+	    		/*&:hover{
+	    			color:white;
+	    		};*/
+	    	}
+	    	/*.product_detail{
+	    		position: absolute;
+			    top: 0;
+			    bottom: 0;
+			    left: 0;
+			    right: 0;
+			    height: auto;
+			    width: 100%;
+			    max-height: 400px;
+			    padding: 50% 15 0 15;
+			    opacity: 0;
+			    z-index: 150;
+
+			    &:hover{
+		    		opacity:1;
+		    	}
+	    	}*/
+
+    	}
+	}
+    
+}
+
+.text-info{
+	font-family: $font-stack-open;
+}
+table{
+	font-family: $font-stack-open;
+}
