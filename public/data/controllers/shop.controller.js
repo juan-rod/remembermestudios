@@ -7,7 +7,15 @@ function ShopController($scope, $routeParams, firebase, $firebaseArray, ngCart, 
 
   var ref = firebase.database().ref().child("product_images");
   $scope.store = $firebaseArray(ref);
-
+  
+  $scope.formData = {};
+  $scope.formData.country= 'United States';
+  var user = firebase.auth().currentUser;
+    
+    // function to process the form
+    $scope.processForm = function() {
+        alert('awesome!');
+    };
     // function productModal(id){
     //   console.log("id:", id);
       // var record = $scope.store.$getRecord(id);
@@ -31,18 +39,62 @@ function ShopController($scope, $routeParams, firebase, $firebaseArray, ngCart, 
       // $('#productModal').modal(); 
      
     // }
-
-    $scope.checkout = function(){
-
-      var totalItems = ngCart.getTotalItems();
+ var totalItems = ngCart.getTotalItems();
       $scope.totalCost = ngCart.totalCost();
-      swal("Oops!", "Purchase options are coming soon!", "warning");
-      // $('#checkoutModal').modal(); 
+$scope.counter = 0;
+      $scope.checkIfUser=function(email){
+        firebase.auth().onAuthStateChanged(function(user) {
+            if (user) {
+              // User is signed in.
+            } else {
+              // No user is signed in.
+              console.log("no user signed in:",user);
+            }
+});
+      }
+    // $scope.login=function(){
+    //   console.log("hello");
+    //   swal({
+    //     title: 'Create An Account',
+    //     html:
+    //       '<input id="email" class="swal2-input" name="email" ng-model="email" class="form-control" autofocus>' +
+    //       '<input type="email" id="password" class="swal2-input" name="password" ng-model="password" class="form-control" phash>',
+    //     preConfirm: function () {
+    //       return new Promise(function (resolve) {
+    //         resolve([
+    //           $('#email').val(),
+    //           $('#password').val()
+    //         ])
+    //       })
+    //     }
+    //   }).then(function (result) {
+    //     console.log("result",result);
+    //     swal(JSON.stringify(result))
+    //   }).catch(swal.noop)
+    // }
+    $scope.createAccount = function(email,password){
+      console.log("email,password:",email,password);
     }
 
     $scope.submitPayment = function(e){
-      var $form = $('#payment-form');
+      var $form = {
+        cvc: $('#card-cvc').val(),
+        number: $('#card-number').val(),
+        exp_month:$('#card-exp-month').val(),
+        exp_year: $('#card-exp-year').val(),
+        name: $scope.formData.fname +' '+ $scope.formData.lname,
+        address_line1:$scope.formData.address,
+        address_line2:$scope.formData.address_line2,
+        address_city:$scope.formData.city,
+        address_state:$scope.formData.state,
+        address_country:$scope.formData.country,
+        address_zip: $scope.formData.zip
+
+      }
+
+        // var $form = $('#payment-form');
         $('.payment-errors').addClass('hidden');
+
         // Request a token from Stripe:
       Stripe.card.createToken($form, stripeResponseHandler);
 
@@ -54,7 +106,6 @@ function ShopController($scope, $routeParams, firebase, $firebaseArray, ngCart, 
       // Grab the form:
       var $form = $('#payment-form');
       console.log("$form:",$form);
-      console.log("status:",status);
       console.log("response:",response);
 
       if (response.error) { // Problem!
@@ -68,7 +119,6 @@ function ShopController($scope, $routeParams, firebase, $firebaseArray, ngCart, 
 
        // Get the token ID:
         var token = response.id;
-        console.log("token in stripeResponseHandler:", token);
        
         // mvPayment.processPayment(response).then(function(success){
         //   console.log("success:", success);

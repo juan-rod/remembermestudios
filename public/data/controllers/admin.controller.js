@@ -113,7 +113,6 @@ function AdminController(firebase, $location, $scope, $firebaseArray) {
 		});
  	};
 
-
  	
 
 	this.postIt = function(title,blogPost){

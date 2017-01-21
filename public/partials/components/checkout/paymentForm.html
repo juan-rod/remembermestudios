@@ -1,0 +1,50 @@
+
+<!-- form-payment.html -->
+<!-- <div class="text-center"> -->
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 border">
+	<h4>Payment method</h4>
+	<p>All transactions are secure and encrypted.</p>
+<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 border">
+   <!--  <form action="/checkout" method="POST" id="payment-form" ng-submit="submitPayment($event)">  -->
+	  
+	  <div class="form-row">
+	    <label for="cardNumber">Card Number</label>
+	    <input type="text" id="card-number" class="form-control" data-stripe="number" required>
+	  </div>
+
+	  <div class="form-row">
+	    <label for="expiration">Expiration (MM/YY)</label>
+	      <input type="text" id="card-exp-month"  class="form-control" data-stripe="exp_month" required>
+	    <span> / </span>
+	    <input type="text" id="card-exp-year" class="form-control" data-stripe="exp_year" required>
+	    <label for='cvc'>CVC</label>
+	      <input type="text" id="card-cvc" class="form-control" data-stripe="cvc" required>
+	  </div>
+
+
+	  <input type="submit" class="submit" value="Submit Payment">
+	<!-- </form> -->
+
+</div>
+<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 border pf-orderDetails"  >
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 border pf-od-product">
+		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 border pf-od-product-title">
+			
+			
+			<h4> Product name</h4>
+		</div>
+		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 border pf-od-product-price">
+			$32
+		</div>
+	</div>
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 border pf-od-shipping">
+		shipping: $2.99
+	</div>
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 border pf-od-total">
+		<span>Total</span>
+      <p ng-model="totalCost"></p>
+      <p>{{totalCost}}</p>
+       <input type="hidden" name="price" value="{{totalCost}}")>
+	</div>
+</div>
+</div>

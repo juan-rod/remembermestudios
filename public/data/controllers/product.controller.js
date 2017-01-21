@@ -1,7 +1,7 @@
-function ProductController($scope, $routeParams, firebase, $firebaseArray) {
+function ProductController($scope, $stateParams, firebase, $firebaseArray) {
 
 
-$scope.productId= $routeParams.id;
+$scope.productId= $stateParams.id;
 var id = $scope.productId
 var ref = firebase.database().ref().child("product_images");
 $scope.product=[];
@@ -17,7 +17,7 @@ $scope.listOfProducts.$loaded().then(function(x) {
 });
 
 }
-ProductController.$inject=['$scope', '$routeParams','firebase','$firebaseArray'];
+ProductController.$inject=['$scope', '$stateParams','firebase','$firebaseArray'];
 angular
 	.module('app')
 	.controller('ProductController', ProductController);

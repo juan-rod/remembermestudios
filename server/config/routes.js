@@ -1,10 +1,14 @@
-var payment = require('../controllers/payment'),
+var	mongoose = require('mongoose'),
+	payment = require('../controllers/payment'),
+	// csrf = require('csurf'),
 	// auth = require('./auth'),
+	// User = mongoose.model('User'),
 	// users = require('../controllers/users'),
-	mongoose = require('mongoose');
-	// User = mongoose.model('User');
+	passport = require('passport');
 
+// var csrfProtection = csrf();
 module.exports = function(app){
+	// app.use(csrfProtection);
 
 	// app.get('/api/users', auth.requiresRole('admin'), users.getUsers);
 	// app.post('/api/users', users.createUser);
@@ -20,14 +24,33 @@ module.exports = function(app){
 		res.render('partials/'+ req.params.partialPath);
 	});
 
-	app.get('/charge', function(req,res){
-		res.send('charge page is working');
+	// app.get('/cart', function(req,res,next){
+	// 	var productId = req.params.id;
+	// 	var cart = new Cart(req.session.cart ? req.session.cart : {});
+	// })
+
+	// app.get('/signup',function(req,res){
+	// 	res.render('partials/views/signup');
+	// });
+	// app.post('/signup', passport.authenticate('local.signup',{
+	// 	successRedirect: '/profile',
+	// 	failureRedirect: '/signup',
+	// 	failureFlash: true
+	// }))
+	// app.get('/profile',function(req,res){
+	// 	res.render('partials/views/profile');
+	// })
+	app.get('/checkout', function(req,res){
+		res.send('checkout page is working');
 	});
 
-	app.post('/charge', payment.charge);
+	app.post('/checkout', payment.checkout);
 
 	app.get('/', function(req, res){
 		res.render('index.html');
 	});
+	// app.get('*', function(req, res){
+	// 	res.render('index.html');
+	// })
 }
 

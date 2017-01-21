@@ -1,0 +1,110 @@
+<!-- form.html -->
+<div class="row">
+<div class="col-sm-8 col-sm-offset-2">
+<a ui-sref="home">home</a>
+<a ui-sref="cart">cart</a>
+    <div id="form-container">
+
+        <div class="page-header text-center">
+            <h2>Checkout</h2>
+            
+            <!-- the links to our nested states using relative paths -->
+            <!-- add the active class if the state matches our ui-sref -->
+            <div id="status-buttons" class="text-center">
+              <!-- <a ui-sref-active="active" ui-sref=".login"><span>1</span> Login</a> -->
+                <a ui-sref-active="active" ui-sref=".customer"><span>1</span> Customer</a>
+                <a ui-sref-active="active" ui-sref=".shipping"><span>2</span> Shipping</a>
+                <a ui-sref-active="active" ui-sref=".payment"><span>3</span> Payment</a>
+            </div>
+        </div>
+        
+        <!-- use ng-submit to catch the form submission and use our Angular function -->
+        <!-- <form id="signup-form" ng-submit="processForm()"> -->
+        <span class="payment-errors alert alert-danger hidden"></span>
+        <form action="/checkout" method="POST" id="payment-form" ng-submit="submitPayment($event)"> 
+
+            <!-- our nested state views will be injected here -->
+            <div id="form-views" ui-view></div>
+        </form>
+
+    </div>
+
+    <!-- show our formData as it is being typed -->
+    <pre>
+        {{ formData }}
+    </pre>
+
+
+</div>
+</div>
+
+
+<!-- <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 breadcrumbsDiv">
+  <ul class="breadcrumb breadcrumbcenter">
+    <li class="breadcrumb__item breadcrumb__itemcompleted">
+      <a class="breadcrumb__link" data-dismiss="modal">Cart</a>
+    </li>
+    <li class="breadcrumb__item breadcrumb__itemcurrent">
+    Customer information
+    </li>
+    <li class="breadcrumb__item breadcrumb__itemblank">
+    Shipping method
+    </li>
+    <li class="breadcrumb__item breadcrumb__itemblank">
+    Payment method
+    </li>
+  </ul>
+</div> --> 
+
+<!-- <customer-form></customer-form> -->
+<!-- <shipping-form></shipping-form>
+<payment-form></payment-form> -->
+
+<!-- <form action="/checkout" method="POST" id="payment-form" ng-submit="submitPayment($event)"> 
+  <span class="payment-errors alert alert-danger hidden"></span>
+  <div class="form-row">
+    <label>
+      <span>Total</span>
+      <p ng-model="totalCost"></p>
+      <p>{{totalCost}}</p>
+       <input type="hidden" name="price" value="{{totalCost}}")>
+    </label>
+  </div>
+  <div class="form-row">
+    <label>
+      <span>Name</span>
+      <input type="text" size="20" data-stripe="name" name="name" required>
+    </label>
+  </div>
+  <div class="form-row">
+    <label>
+      <span>Address</span>
+      <input type="text" size="20" data-stripe="address_line1" name="address" required>
+    </label>
+  </div>
+  <div class="form-row">
+    <label>
+      <span>Card Number</span>
+      <input type="text" size="20" data-stripe="number" required>
+    </label>
+  </div>
+
+  <div class="form-row">
+    <label>
+      <span>Expiration (MM/YY)</span>
+      <input type="text" size="2" data-stripe="exp_month" required>
+    </label>
+    <span> / </span>
+    <input type="text" size="2" data-stripe="exp_year" required>
+  </div>
+
+  <div class="form-row">
+    <label>
+      <span>CVC</span>
+      <input type="text" size="4" data-stripe="cvc" required>
+    </label>
+  </div>
+
+
+  <input type="submit" class="submit" value="Submit Payment">
+</form>
