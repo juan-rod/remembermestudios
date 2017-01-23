@@ -74,7 +74,7 @@
             templateUrl: '/partials/admin/admin.login.html'
         })
         .state('adminConsole', {
-            url: '/adminConsole/',
+            url: '/adminConsole',
             templateUrl: '/partials/admin/admin.console.html'
         })
 

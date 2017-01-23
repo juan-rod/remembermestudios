@@ -11,7 +11,8 @@ function ShopController($scope, $routeParams, firebase, $firebaseArray, ngCart, 
   $scope.formData = {};
   $scope.formData.country= 'United States';
   var user = firebase.auth().currentUser;
-    
+    // var authData = ref.getAuth();
+    // console.log("authData:",authData);
     // function to process the form
     $scope.processForm = function() {
         alert('awesome!');
@@ -91,6 +92,20 @@ $scope.counter = 0;
         address_zip: $scope.formData.zip
 
       }
+      var userInfo = {
+        fname: $scope.formData.fname,
+        lname: $scope.formData.lname,
+        address_line1:$scope.formData.address,
+        // address_line2:$scope.formData.address_line2,
+        address_city:$scope.formData.city,
+        address_state:$scope.formData.state,
+        address_country:$scope.formData.country,
+        address_zip: $scope.formData.zip,
+        phone: $scope.formData.phone
+      }
+
+      saveShippingInfo(userInfo);
+ 
 
         // var $form = $('#payment-form');
         $('.payment-errors').addClass('hidden');
@@ -100,6 +115,16 @@ $scope.counter = 0;
 
       // Prevent the form from being submitted:
       return false;
+    }
+
+    function saveShippingInfo(userInfo){
+      var newPostKey = firebase.database().ref().child('user-items').push().key;
+      var updates = {};
+      userInfo.id = newPostKey;
+      updates['/user-items/' + newPostKey] = userInfo;
+      
+     
+      return firebase.database().ref().update(updates);
     }
 
     function stripeResponseHandler(status, response) {

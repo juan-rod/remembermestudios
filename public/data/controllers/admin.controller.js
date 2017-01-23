@@ -1,4 +1,4 @@
-function AdminController(firebase, $location, $scope, $firebaseArray) {
+function AdminController(firebase, $location, $scope, $firebaseArray, $state, $stateParams) {
 	var auth = firebase.auth();
 	$scope.pTitle=[];
 	$scope.pDescription=[];
@@ -104,12 +104,17 @@ function AdminController(firebase, $location, $scope, $firebaseArray) {
     }
 
 	this.signIn =function(email,password){	
+		console.log("hello from signin:", $state);
+		console.log("hello from email/password:", email,password);
  		auth.signInWithEmailAndPassword(email, password).then(function(firebaseUser) {
- 			 $location.path( "/adminConsole" ).replace();
+ 			 // $location.path( "/adminConsole" ).replace();
+ 			 // $state.go('.adminConsole', $stateParams, {reload: true, inherit: false});
+ 			 $state.go('.adminConsole' );
  			 $scope.$apply();
 		}).catch(function(error) {
   			console.error("Authentication failed:", error);
-  			 $location.path( "/admin" );
+  			$state.go('/adminConsole' );
+  			 // $location.path( "/admin" );
 		});
  	};
 
@@ -149,7 +154,7 @@ function AdminController(firebase, $location, $scope, $firebaseArray) {
 
 }
 
-AdminController.$inject = ['firebase','$location','$scope', '$firebaseArray'];
+AdminController.$inject = ['firebase','$location','$scope', '$firebaseArray', '$state', '$stateParams'];
 
 angular
 	.module('app')
