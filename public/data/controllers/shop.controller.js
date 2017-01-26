@@ -41,8 +41,11 @@ function ShopController($scope, $routeParams, firebase, $firebaseArray, ngCart, 
      
     // }
  var totalItems = ngCart.getTotalItems();
-      $scope.totalCost = ngCart.totalCost();
-$scope.counter = 0;
+ $scope.getCart = ngCart.getCart().items;
+
+ // console.log("getCart:",$scope.getCart);
+  $scope.totalCost = ngCart.totalCost();
+  $scope.counter = 0;
       $scope.checkIfUser=function(email){
         firebase.auth().onAuthStateChanged(function(user) {
             if (user) {
@@ -51,7 +54,7 @@ $scope.counter = 0;
               // No user is signed in.
               console.log("no user signed in:",user);
             }
-});
+        });
       }
     // $scope.login=function(){
     //   console.log("hello");
@@ -154,6 +157,8 @@ $scope.counter = 0;
 
         // Submit the form:
         $form.get(0).submit();
+        // $form.val('');
+        // return false;
 
       }
         ngCart.empty();

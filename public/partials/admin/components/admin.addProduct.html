@@ -6,7 +6,7 @@
     		<div class="form-group">
 		      <div class="input-group col-xs-4">
 		        <div class="input-group-addon"><span class="fa fa-pencil"></span></div>
-		        <input type="text" class="form-control" placeholder="Product Name" ng-model="pTitle">
+		        <input type="text" class="form-control" placeholder="Product Name" ng-model="product.title">
 		      </div>
 		    </div>
 		<hr />
@@ -14,7 +14,7 @@
     		<div class="form-group">
 		      <div class="input-group col-xs-4">
 		        <div class="input-group-addon"><span class="fa fa-pencil"></span></div>
-		        <textarea type="text" placeholder="Product Description" ng-model="pDescription">
+		        <textarea type="text" placeholder="Product Description" ng-model="product.description">
 
 		        </textarea>
 		      </div>
@@ -35,7 +35,7 @@
     		<div class="form-group">
 		      <div class="input-group col-xs-4">
 		        <div class="input-group-addon"><span class="fa fa-usd"></span></div>
-		        <input type="text" class="form-control" placeholder="Product Price" ng-model="pPrice">
+		        <input type="text" class="form-control" placeholder="Product Price" ng-model="product.price">
 		      </div>
 		    </div> 
 		<hr />
@@ -43,7 +43,7 @@
 		    <div class="form-group">
 		      <div class="input-group col-xs-4">
 		        <div class="input-group-addon"><span class="fa fa-picture-o"></span></div>
-		        <input type="file" class="form-control" value="upload" id="imageFile" ng-model="image" accept="image/*" multiple="" custom-on-change="vm.image">
+		        <input type="file" class="form-control" value="upload" id="imageFile" ng-model="product.image" accept="image/*" multiple="" custom-on-change="vm.image">
 		        
 		      </div>
 		    </div>

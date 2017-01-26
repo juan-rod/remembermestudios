@@ -13,21 +13,18 @@
 		<div class="temp_main_cols temp_main_products col-lg-4 col-md-4 col-sm-12 col-xs-12">
 			<div class="row">
 				<div class="temp_main_products_div temp_main_products_top col-lg-12 col-md-12 col-sm-12 col-xs-12" ng-repeat="item in store | orderBy:'name' | filter:search | limitTo: 2">
-					<!-- <a href="#product/{{item.$id}}"> -->
+					
 					<a ui-sref="productDetail({ id: item.$id })">
 						<div class="temp_main_products_title">
 							<p>{{item.title}}</p>
 							<p class="temp_main_subtitle">Shop Now</p>
 						</div>
-						<img src="{{item.url}}">
+						<img ng-src="{{item.url}}">
 					</a>
 				</div>
-				<!-- <div class="temp_main_products_div temp_main_products_bottom col-lg-12 col-md-12 col-sm-12 col-xs-12">
-					<p>title</p>
-					<p>shop now</p>
-					<img src="">
-				</div> -->
+				
 			</div>
 		</div>
 	</div>
 </div>
+
