@@ -41,7 +41,10 @@ function ShopController($scope, $routeParams, firebase, $firebaseArray, ngCart, 
      
     // }
  var totalItems = ngCart.getTotalItems();
+ // $scope.subtotal = ngCart.getPrice();
+ $scope.shipping = ngCart.getShipping();
  $scope.getCart = ngCart.getCart().items;
+  console.log('$scope.getCart:',$scope.getCart );
 
  // console.log("getCart:",$scope.getCart);
   $scope.totalCost = ngCart.totalCost();
@@ -164,7 +167,7 @@ function ShopController($scope, $routeParams, firebase, $firebaseArray, ngCart, 
         ngCart.empty();
     };
     // ngCart.setTaxRate(7.5);
-    ngCart.setShipping(2.99);   
+    ngCart.setShipping(4.99);   
 
 
 

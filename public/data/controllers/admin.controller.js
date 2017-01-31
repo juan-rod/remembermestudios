@@ -12,18 +12,26 @@ function AdminController(firebase, $location, $scope, $firebaseArray, $state, $s
     this.editProduct = editProduct;
     this.updateProduct = updateProduct;
 
+	//var refStorage =storageService.ref('product_images').child(this.images.childPath); 
+  	//	console.log("refStorage:",refStorage);
     
     this.image = function(event){
   		event.preventDefault();
-    	var file = event.target.files[0];
-  		// uploadImage(file);
-  		mvAdmin.createImg(file,$scope.product).then(function(ref){
+    	// var file = event.target.files[0];
+    	var file = event.target.files;
+  		// for (var i = 0; i < file.length; i++) {
+    //     	var imageFile = file[i];
+
+   	// 	 }
+  		mvAdmin.createProduct(file,$scope.product).then(function(ref){
   			$scope.product.title= '';
 			$scope.product.description='';
 			$scope.product.price='';
 			file = '';
 			swal("Success", "Your image has been upload", "success");
   		});
+  		// uploadImage(file);
+  		
   	};
   	
    	function editProduct(id){
@@ -52,21 +60,18 @@ function AdminController(firebase, $location, $scope, $firebaseArray, $state, $s
         type: "warning",
         showCancelButton: true,
         confirmButtonColor: "#DD6B55",
-        confirmButtonText: "Yes, delete it!",
-        closeOnConfirm: false
-      },
-      function(){
-        var imgRef = storageService.ref(image.path);
+        confirmButtonText: "Yes, delete it!"
+      }).then(function(){
+	        var imgRef = storageService.ref(image.path);
 
-        imgRef.delete().then(function() {
-          list.$remove(image).then(function(ref) {
-            swal("Deleted!", "Your image has been deleted.", "success");
-          });
-        }).catch(function(error) {
-          console.log('an error occurred!', error);
-        });
-      });
-
+	        imgRef.delete().then(function() {
+	          list.$remove(image).then(function(ref) {
+	            swal("Deleted!", "Your image has been deleted.", "success");
+	          });
+	        }).catch(function(error) {
+	          console.log('an error occurred!', error);
+	        });
+	      });
     }
 
 	this.signIn =function(email,password){	
@@ -92,7 +97,6 @@ function AdminController(firebase, $location, $scope, $firebaseArray, $state, $s
 			date: todaysDate(),
 			post: blogPost
 		};
-		console.log("postData:",postData);
 		var newPostKey = firebase.database().ref().child('blog').push().key;
 		var updates = {};
 		postData.id = newPostKey;

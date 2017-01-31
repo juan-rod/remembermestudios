@@ -58,6 +58,7 @@
 		        <div ng-model="uTitle">{{image.title}}</div>
 		        <div ng-model="uDescription">{{image.desc}}</div>
 		        <div ng-model="uPrice">{{image.price | currency}}</div>
+		        <h5>{{image.childPath}}</h5>
 		        <h6>{{image.date}}</h6>
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 showUploadedDelBtn">
 					<a onclick="return false;"><button class="btn btn-warning btn-block" data-target="#editModal" ng-click="vm.editProduct(image.$id)">Edit </button></a>

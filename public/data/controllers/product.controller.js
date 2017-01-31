@@ -10,6 +10,7 @@ $scope.listOfProducts = $firebaseArray(ref);
 
 $scope.listOfProducts.$loaded().then(function(x) {
 	   var product= x.$getRecord(id);
+	   console.log("product:",product);
 	    $scope.product.push(product);
 
 	}).catch(function(error) {

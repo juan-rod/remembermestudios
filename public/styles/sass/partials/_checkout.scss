@@ -12,11 +12,13 @@ pre{
 	background:#C1C0C0; 
 	margin-bottom:20px;
     border-radius:5px; 
+    top: 12vh;
+    position: relative;
 }
 #form-container .page-header{ 
 	background:#eee; 
 	margin:0; 
-	padding:30px; 
+	padding:10px; 
     border-top-left-radius:5px; 
     border-top-right-radius:5px; 
 }
@@ -24,15 +26,60 @@ pre{
 /* numbered buttons */
 #status-buttons{  }
 #status-buttons a{ 
-	color:#FFF; 
+	/*color:#FFF; */
+	color: #333;
 	display:inline-block; 
-	font-size:12px; 
+	font-size:11px; 
 	margin-right:10px; 
 	text-align:center; 
 	text-transform:uppercase; 
 }
 #status-buttons a:hover{ 
 	text-decoration:none; 
+}
+.exp-div{
+	padding:0;
+	margin-top:10px;
+	label{
+		width: 100%;
+	}
+	span{
+		font-size: 20px;
+	}
+}
+#card-exp-month{
+	width: 40%;
+	display: inline;
+}
+#card-exp-year{
+	width: 40%;
+	display: inline;
+}
+#card-cvc{
+	width: 45%;
+}
+.payment-submit{
+	margin-top: 20px;
+	float: right;
+	/*border: 1px solid #F4F4F4;*/
+    border-radius: 0;
+    background-color: rgba(52, 52, 52, 0.50);
+    color: #F4F4F4;
+    font-weight: 100;
+    height: 50px;
+	width: 150px;
+	font-size: 18px;
+
+    &:hover{
+    	background-color: rgba(52, 52, 52, 0.85);
+    }
+}
+.email-group{
+	padding: 0 30px;
+}
+.shipping_add{
+	/*background-color: red;*/
+	height: auto;
 }
 #status-buttons span{ 
 	background:#E0DEDE; 
@@ -43,15 +90,101 @@ pre{
 	width:30px; 
     border-radius:50%; 
 }
+.radio{
+	padding: 0 30px;
+}
 
 /* active buttons */
 #status-buttons a.active span { 
 	background:#00BC8C; 
 }
+.shipping-formgroup{
+	padding: 0 10%;
+
+}
+.shippingRate{
+	padding: 0 10%;
+	font-size: 20px;
+	margin-bottom: 20px;
+}
+.shipping_add{
+	border-bottom: 1px solid rgba(244, 244, 244, 0.44);
+}
 
 .shippingForm_title{
+	border-bottom: 1px solid rgba(244, 244, 244, 0.44);
 	p{
 		margin: 0;
+		font-size: 20px;
+	}
+}
+.shippingForm_address{
+	font-size: 16px;
+	color: rgba(51, 51, 51, 0.69);
+	padding: 10px;
+}
+.card-column{
+	border-top: 1px solid rgba(244, 244, 244, 0.44);
+	border-left: 1px solid rgba(244, 244, 244, 0.44);
+	border-right: 1px solid rgba(244, 244, 244, 0.44);
+}
+.pf-orderDetails{
+	/*padding: 0;*/
+	border-top: 1px solid rgba(244, 244, 244, 0.44);
+	border-left: 1px solid rgba(244, 244, 244, 0.44);
+	border-right: 1px solid rgba(244, 244, 244, 0.44);
+	.pf-od-product{
+		padding-left: 0px;
+		padding-right: 0;
+		margin: 0 0 10px 0;
+		border-bottom: 1px solid rgba(244, 244, 244, 0.44);
+		.pf-od-product-img{
+			padding: 0;
+		}
+		.pf-od-product-title{
+			padding: 0;
+			text-align: right;
+		}
+		.pf-od-product-price{
+			padding: 0;
+		    text-align: right;
+		    font-size: 20px;
+		}
+	}
+		.pf-od-subtotal{
+			padding: 0 10px;
+			margin-top: 15px;
+		    text-align: right;
+		    font-size: 20px;
+		    border-bottom: 1px solid rgba(244, 244, 244, 0.44);
+		}
+		.pf-od-shipping{
+			padding: 0 10px;
+			margin-top: 15px;
+		    text-align: right;
+		    font-size: 20px;
+		    border-bottom: 1px solid rgba(244, 244, 244, 0.44);
+		}
+		.pf-od-total{
+			padding: 0 10px;
+			margin-top: 15px;
+		    text-align: right;
+		    font-size: 20px;
+		    /*border-bottom: 1px solid rgba(244, 244, 244, 0.44);*/
+		}
+		.pzero{
+			padding: 0;
+		}
+		.talign{
+			text-align: left;
+			color: rgba(51, 51, 51, 0.69);
+    		font-size: 16px;
+		}
+}
+
+.shipping-add{
+	h3{
+		padding-left: 15px;
 	}
 }
 

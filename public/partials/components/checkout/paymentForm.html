@@ -1,56 +1,84 @@
 
 <!-- form-payment.html -->
 <!-- <div class="text-center"> -->
-<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 border">
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
 	<h4>Payment method</h4>
 	<p>All transactions are secure and encrypted.</p>
-<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 border">
+<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6  pf-orderDetails"  >
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12  pf-od-product" ng-repeat="item in getCart" >
+		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4  pf-od-product-img">
+			
+			
+			<img width="100%" ng-src="{{item._data}}">
+		</div>
+		<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8  pf-od-product-title">
+			
+			
+			<p> {{item._name}}</p>
+		</div>
+		<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8  pf-od-product-price">
+			<p> {{item._price | currency}}</p>
+			<!-- $32 -->
+		</div>
+	</div>
+	<!-- <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 border pf-od-subtotal">
+		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pzero talign">
+			Subtotal
+		</div>
+		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pzero">
+			{{ subtotal| currency}}
+		</div>
+		
+	</div> -->
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pf-od-shipping">
+		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pzero talign">
+			Shipping
+		</div>
+		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pzero">
+			{{ shipping | currency }}
+		</div>
+		
+	</div>
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12  pf-od-total">
+		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pzero talign">
+			Total
+		</div>
+		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pzero">
+			<p ng-model="totalCost"></p>
+      		<p>{{totalCost | currency}}</p>
+       		<input type="hidden" name="price" value="{{totalCost}}")>
+		</div>
+	</div>
+</div>
+<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 card-column">
    <!--  <form action="/checkout" method="POST" id="payment-form" ng-submit="submitPayment($event)">  -->
 	  
 	  <div class="form-row">
 	    <label for="cardNumber">Card Number</label>
 	    <input type="text" id="card-number" class="form-control" data-stripe="number" required>
+	    <label for="cardNumber">Name on Card</label>
+	    <input type="text" id="card-name" class="form-control" data-stripe="name" required>
 	  </div>
 
 	  <div class="form-row">
-	    <label for="expiration">Expiration (MM/YY)</label>
-	      <input type="text" id="card-exp-month"  class="form-control" data-stripe="exp_month" required>
-	    <span> / </span>
-	    <input type="text" id="card-exp-year" class="form-control" data-stripe="exp_year" required>
-	    <label for='cvc'>CVC</label>
-	      <input type="text" id="card-cvc" class="form-control" data-stripe="cvc" required>
+	  	<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 exp-div">
+		    <label for="expiration">Expiration (MM/YY)</label>
+		     	<input type="text" id="card-exp-month"  class="form-control" data-stripe="exp_month" required>
+		    	<span> / </span>
+		    	<input type="text" id="card-exp-year" class="form-control" data-stripe="exp_year" required>
+	  	</div>
+	  	<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 exp-div">
+		    <label for='cvc'>CVC</label>
+		      <input type="text" id="card-cvc" class="form-control" data-stripe="cvc" required>
+	  	</div>
 	  </div>
 
-
-	  <input type="submit" class="submit" value="Submit Payment">
+	 
+	  	<!-- <input type="submit" class="submit payment-submit" value="Submit Payment"> -->
+	 
 	<!-- </form> -->
 
 </div>
-<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 border pf-orderDetails"  >
-	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 border pf-od-product" ng-repeat="item in getCart" >
-		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 border pf-od-product-title">
-			
-			
-			<img width="100%" ng-src="{{item._data}}">
-		</div>
-		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 border pf-od-product-title">
-			
-			
-			<p> {{item._name}}</p>
-		</div>
-		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 border pf-od-product-price">
-			<p> {{item._price}}</p>
-			<!-- $32 -->
-		</div>
-	</div>
-	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 border pf-od-shipping">
-		shipping: $2.99
-	</div>
-	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 border pf-od-total">
-		<span>Total</span>
-      <p ng-model="totalCost"></p>
-      <p>{{totalCost}}</p>
-       <input type="hidden" name="price" value="{{totalCost}}")>
-	</div>
-</div>
+
+<input type="submit" class="submit payment-submit" value="Submit Payment">
 </div>
