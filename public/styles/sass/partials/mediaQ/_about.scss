@@ -1,0 +1,266 @@
+/* Custom, iPhone Retina */ 
+@media only screen and (min-width : 320px) {
+ 	.aboutPage{
+ 		.aboutTitle{
+	 		.mission_underline{
+	 			margin-bottom: 4vh;
+	 		}	
+ 		}
+ 		.aboutTopDiv{
+ 			margin-top:5vh;
+ 			.aboutRM{
+ 				padding: 0;
+ 				p{
+ 					font-size: 14px;
+    				text-align: justify;
+ 				}
+ 			}
+ 			.aboutQuote{
+ 				margin-top: 5vh;
+ 				padding: 0;
+ 				p{
+	 				text-align: justify;
+	    			font-size: 20px;
+ 				}
+ 				.aboutName{
+ 					text-align: right;
+ 				}
+ 			}
+ 		}
+ 		.aboutBottomDiv{
+ 			margin-top: 0vh;
+ 			.mission_underline{
+ 				margin-top: 0vh;
+ 			}
+ 			.aboutImg{
+
+ 			}
+ 			.aboutDesc{
+ 				padding:15% 0;
+ 				.aboutDes_greeting{
+ 					font-size: 16px;
+ 				}
+ 				p{
+ 					font-size: 14px;
+    				text-align: justify;
+ 				}
+ 			}
+ 		}
+ 	}
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width : 480px) {
+	.aboutPage{
+ 		.aboutTitle{
+	 		.mission_underline{
+	 		}	
+ 		}
+ 		.aboutTopDiv{
+ 			.aboutRM{
+ 				
+ 				p{
+ 					
+ 				}
+ 			}
+ 			.aboutQuote{
+ 				
+ 				p{
+	 				font-size: 25px;
+	 				padding-left: 20vw;
+	 				text-align: right;
+ 				}
+ 				.aboutName{
+ 				}
+ 			}
+ 		}
+ 		.aboutBottomDiv{
+ 			margin-top:0;
+ 			.mission_underline{
+ 				margin-top: 0vh;
+ 			}
+ 			.aboutImg{
+
+ 			}
+ 			.aboutDesc{
+ 				.aboutDes_greeting{
+ 					text-align: right;
+    				font-size: 20px;
+ 				}
+ 				p{
+ 				}
+ 			}
+ 		}
+ 	}
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+	.aboutPage{
+ 		.aboutTitle{
+	 		.mission_underline{
+	 		}	
+ 		}
+ 		.aboutTopDiv{
+ 			min-height: 55vh;
+ 			.aboutRM{
+ 				
+ 				p{
+ 					
+ 				}
+ 			}
+ 			.aboutQuote{
+ 				
+ 				p{
+	 				font-size: 30px;
+    				padding-left: 15vw;
+ 				}
+ 				.aboutName{
+ 				}
+ 			}
+ 		}
+ 		.aboutBottomDiv{
+ 			.mission_underline{
+ 				margin-top: 1vh;
+ 			}
+ 			.aboutImg{
+ 				padding:0;
+ 			}
+ 			.aboutDesc{
+ 				padding:0;
+ 				.aboutDes_greeting{
+ 				}
+ 				p{
+ 				}
+ 			}
+ 		}
+ 	}
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 991px) {
+	.aboutPage{
+ 		.aboutTitle{
+	 		.mission_underline{
+	 		}	
+ 		}
+ 		.aboutTopDiv{
+ 			padding: 3% 5% 0;
+ 			.aboutRM{
+ 				
+ 				p{
+ 					font-size: 16px;
+ 				}
+ 			}
+ 			.aboutQuote{
+ 				
+ 				p{
+	 				
+ 				}
+ 				.aboutName{
+ 				}
+ 			}
+ 		}
+ 		.aboutBottomDiv{
+ 			.mission_underline{
+ 			}
+ 			.aboutImg{
+
+ 			}
+ 			.aboutDesc{
+ 				padding: 0 5%;
+ 				.aboutDes_greeting{
+ 				}
+ 				p{
+ 					font-size: 16px;
+ 				}
+ 			}
+ 		}
+ 	}
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+	.aboutPage{
+ 		.aboutTitle{
+	 		.mission_underline{
+	 		}	
+ 		}
+ 		.aboutTopDiv{
+ 			.aboutRM{
+ 				
+ 				p{
+ 					
+ 				}
+ 			}
+ 			.aboutQuote{
+ 				
+ 				p{
+	 				
+ 				}
+ 				.aboutName{
+ 				}
+ 			}
+ 		}
+ 		.aboutBottomDiv{
+
+ 			.mission_underline{
+ 			}
+ 			.aboutImg{
+
+ 			}
+ 			.aboutDesc{
+ 				padding: 0 5%;
+ 				.aboutDes_greeting{
+ 				}
+ 				p{
+ 				}
+ 			}
+ 		}
+ 	}
+}
+
+
+/*==========  Non-Mobile First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 480px) {
+
+}
+
+/* Custom, iPhone Retina */ 
+@media only screen and (max-width : 320px) {
+   	.aboutBottomDiv{
+ 				margin-top: 0;
+
+ 			.mission_underline{
+ 				margin-top: 0;
+ 			}
+ 			.aboutImg{
+
+ 			}
+ 			.aboutDesc{
+ 				.aboutDes_greeting{
+ 				}
+ 				p{
+ 				}
+ 			}
+ 		}
+ 	
+}

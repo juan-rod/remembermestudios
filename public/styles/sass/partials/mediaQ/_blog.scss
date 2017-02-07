@@ -1,0 +1,116 @@
+/* Custom, iPhone Retina */ 
+@media only screen and (min-width : 320px) {
+ 	.blogDiv {
+ 		.blogDiv_card{
+ 			padding: 0;
+ 			.blogDiv_title {
+ 				p{
+ 					font-size: 25px;
+ 				}
+ 			}
+ 			.blogDiv_content{
+ 				padding:0;
+ 				p{
+ 					font-size: 14px;
+ 					text-align: justify;
+ 				}
+ 			}
+ 		}
+ 	}
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width : 480px) {
+	.blogDiv {
+ 		.blogDiv_card{
+ 			padding: 0;
+ 			.blogDiv_title {
+ 				p{
+ 					font-size: 25px;
+ 				}
+ 			}
+ 			.blogDiv_content{
+ 				padding:0;
+ 				p{
+ 					font-size: 14px;
+ 					text-align: justify;
+ 				}
+ 			}
+ 		}
+ 	}
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+	.blogDiv {
+ 		.blogDiv_card{
+ 			padding: 3% 10%;
+ 			.blogDiv_title {
+ 				p{
+ 					font-size: 30px;
+ 				}
+ 			}
+ 			.blogDiv_content{
+ 				padding:0;
+ 				p{
+ 					font-size: 18px;
+ 					text-align: justify;
+ 				}
+ 			}
+ 		}
+ 	}
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+	.blogDiv {
+ 		.blogDiv_card{
+ 			padding: 3% 10%;
+ 			.blogDiv_title {
+ 				p{
+ 					font-size: 30px;
+ 				}
+ 			}
+ 			.blogDiv_content{
+ 				padding:0;
+ 				p{
+ 					font-size: 18px;
+ 					text-align: justify;
+ 				}
+ 			}
+ 		}
+ 	}
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
+}
+
+
+/*==========  Non-Mobile First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 480px) {
+
+}
+
+/* Custom, iPhone Retina */ 
+@media only screen and (max-width : 320px) {
+    
+}

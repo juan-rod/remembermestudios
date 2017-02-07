@@ -1,3 +1,34 @@
+  #navMenu_contact{
+    position: absolute;
+    right: 0;
+    /*margin: 0 3%;*/
+    top:0;
+    width: 100%;
+    text-align: right;
+    /*background-color:rgba(238, 238, 238, 0.49);*/
+    padding-right: 3%;
+    ul{
+      list-style: none;
+      position: relative;
+      margin: 0;
+      padding: 0;
+      margin-bottom: 0;
+        li{
+          display: inline;
+          font-size: 12px;
+          a{
+            font-weight: 300;
+            color: $text-color;
+            text-align: center;
+            padding: 0 4px;
+            text-decoration: none;
+          }
+        }
+    }    
+  }
+    .navbar-header{
+      margin-top:20px;
+    }
 .navMenu{
 	position: fixed;
   top: 0;
@@ -83,31 +114,7 @@
     }
   }
 
-  .navMenu_contact{
-    position: absolute;
-    right: 0;
-    margin: 0 3%;
-    top:0;
-    ul{
-      list-style: none;
-      position: relative;
-      margin: 0;
-      padding: 0;
-      margin-bottom: 0;
-        li{
-          display: inline;
-          font-size: 12px;
-          a{
-            font-weight: 300;
-            color: $text-color;
-            text-align: center;
-            padding: 0 4px;
-            text-decoration: none;
-          }
-        }
-    }
-        
-    }
+
 /*	.pull-left{
 		float: left;
 		.navMenu_categories{
@@ -128,10 +135,19 @@
 .navCart{
   font-size: 18px !important;
 }
+.ngCart-totalItems{
+  padding:10px 15px;
+  line-height: 20px;
+    a{
+      text-decoration: none;
+      color:#797979;
+    }
+}
 .vertical_line{
   height: 11px;
   width: 1px;
-  background: #FFF;
+  /*background: #FFF;*/
+  background: #797979;
   display: inline-block;
   margin: 0 2px;
 }

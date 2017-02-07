@@ -11,42 +11,11 @@ function ShopController($scope, $routeParams, firebase, $firebaseArray, ngCart, 
   $scope.formData = {};
   $scope.formData.country= 'United States';
   var user = firebase.auth().currentUser;
-    // var authData = ref.getAuth();
-    // console.log("authData:",authData);
-    // function to process the form
-    $scope.processForm = function() {
-        alert('awesome!');
-    };
-    // function productModal(id){
-    //   console.log("id:", id);
-      // var record = $scope.store.$getRecord(id);
-      // console.log("productDetail:", $scope.productDetail);
-      // return $scope.productDetail.push(record);
-      // for (var i = 0; i < $scope.store.length; i++) {
-      // console.log("$scope.store[i]:", $scope.store[i].$id);
 
-      // if ($scope.store[i].$id == id)
-      //     return $scope.store[i];
-      // }
-      // console.log("$scope.productDetail:", $scope.productDetail);
-      // return null;
-
-
-       
-      // console.log("ProductPage", $scope.productPage);
-      // console.log("productInfo title", $scope.productModal.title);
-      // console.log("productInfo id", $scope.productModal.$id);
-
-      // $('#productModal').modal(); 
-     
-    // }
  var totalItems = ngCart.getTotalItems();
- // $scope.subtotal = ngCart.getPrice();
  $scope.shipping = ngCart.getShipping();
  $scope.getCart = ngCart.getCart().items;
-  console.log('$scope.getCart:',$scope.getCart );
 
- // console.log("getCart:",$scope.getCart);
   $scope.totalCost = ngCart.totalCost();
   $scope.counter = 0;
       $scope.checkIfUser=function(email){
@@ -59,26 +28,6 @@ function ShopController($scope, $routeParams, firebase, $firebaseArray, ngCart, 
             }
         });
       }
-    // $scope.login=function(){
-    //   console.log("hello");
-    //   swal({
-    //     title: 'Create An Account',
-    //     html:
-    //       '<input id="email" class="swal2-input" name="email" ng-model="email" class="form-control" autofocus>' +
-    //       '<input type="email" id="password" class="swal2-input" name="password" ng-model="password" class="form-control" phash>',
-    //     preConfirm: function () {
-    //       return new Promise(function (resolve) {
-    //         resolve([
-    //           $('#email').val(),
-    //           $('#password').val()
-    //         ])
-    //       })
-    //     }
-    //   }).then(function (result) {
-    //     console.log("result",result);
-    //     swal(JSON.stringify(result))
-    //   }).catch(swal.noop)
-    // }
     $scope.createAccount = function(email,password){
       console.log("email,password:",email,password);
     }
@@ -136,8 +85,6 @@ function ShopController($scope, $routeParams, firebase, $firebaseArray, ngCart, 
     function stripeResponseHandler(status, response) {
       // Grab the form:
       var $form = $('#payment-form');
-      console.log("$form:",$form);
-      console.log("response:",response);
 
       if (response.error) { // Problem!
 
@@ -147,7 +94,7 @@ function ShopController($scope, $routeParams, firebase, $firebaseArray, ngCart, 
         $form.find('.submit').prop('disabled', false); // Re-enable submission
 
       } else { // Token was created!
-
+        swal("Order is being processed", "Look for a confirmation email!", "success");
        // Get the token ID:
         var token = response.id;
        

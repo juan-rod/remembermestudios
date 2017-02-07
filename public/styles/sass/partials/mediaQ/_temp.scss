@@ -4,6 +4,7 @@
 @media only screen and (min-width : 320px) and (max-width : 480px) {
 	.temp_main_body{
 		max-height: 100%;
+		display: none;
 	}
     .temp_main_body .temp_main_cols {
     	height: 100%;
@@ -70,9 +71,9 @@
 /* Custom, iPhone Retina */ 
 @media only screen and (min-width : 320px) and (max-width : 480px)  {
 	.temp_intro_body{
-		padding:10% 5%;
-		min-height: 55vh;
-    	max-height: 55vh;
+		padding:0 5%;
+		min-height: 45vh;
+    	max-height: 45vh;
 		.temp_intro_body_hi{
 			font-size: 14px;
 		}
@@ -159,11 +160,14 @@
 /* Custom, iPhone Retina */ 
 @media only screen and (min-width : 320px) and (max-width : 480px) {
 	.temp_product_body{
+		padding:0;
 		.product_body_div{
 			margin-bottom:0;
+			padding: 0;
 			.product_body_item {
 				.product_body_desc{
-					padding:0;
+					padding: 0 3%;
+    				width: 100%;
 				}
 
 				img{
@@ -247,7 +251,8 @@
 /* Custom, iPhone Retina */ 
 @media only screen and (min-width : 320px) and (max-width : 480px) {
 	.temp_footer{
-		padding: 10% 5%;
+		padding: 20% 5%;
+		min-height: 45vh;
 		.temp_footer_subscribe{
 			.temp_footer_subscribe_title{
 				font-size: 18px;

@@ -1,4 +1,32 @@
 @import url("https://fonts.googleapis.com/css?family=Cedarville+Cursive|Dancing+Script|Open+Sans:300i,400|Roboto:300,400");
+#navMenu_contact {
+  position: absolute;
+  right: 0;
+  /*margin: 0 3%;*/
+  top: 0;
+  width: 100%;
+  text-align: right;
+  /*background-color:rgba(238, 238, 238, 0.49);*/
+  padding-right: 3%; }
+  #navMenu_contact ul {
+    list-style: none;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 0; }
+    #navMenu_contact ul li {
+      display: inline;
+      font-size: 12px; }
+      #navMenu_contact ul li a {
+        font-weight: 300;
+        color: #333;
+        text-align: center;
+        padding: 0 4px;
+        text-decoration: none; }
+
+.navbar-header {
+  margin-top: 20px; }
+
 .navMenu {
   position: fixed;
   top: 0;
@@ -86,34 +114,22 @@
             visibility: visible;
             -webkit-transform: scaleX(1);
             transform: scaleX(1); }
-  .navMenu .navMenu_contact {
-    position: absolute;
-    right: 0;
-    margin: 0 3%;
-    top: 0; }
-    .navMenu .navMenu_contact ul {
-      list-style: none;
-      position: relative;
-      margin: 0;
-      padding: 0;
-      margin-bottom: 0; }
-      .navMenu .navMenu_contact ul li {
-        display: inline;
-        font-size: 12px; }
-        .navMenu .navMenu_contact ul li a {
-          font-weight: 300;
-          color: #333;
-          text-align: center;
-          padding: 0 4px;
-          text-decoration: none; }
 
 .navCart {
   font-size: 18px !important; }
 
+.ngCart-totalItems {
+  padding: 10px 15px;
+  line-height: 20px; }
+  .ngCart-totalItems a {
+    text-decoration: none;
+    color: #797979; }
+
 .vertical_line {
   height: 11px;
   width: 1px;
-  background: #FFF;
+  /*background: #FFF;*/
+  background: #797979;
   display: inline-block;
   margin: 0 2px; }
 
@@ -1193,7 +1209,8 @@ table {
 /* Custom, iPhone Retina */
 @media only screen and (min-width: 320px) and (max-width: 480px) {
   .temp_main_body {
-    max-height: 100%; }
+    max-height: 100%;
+    display: none; }
 
   .temp_main_body .temp_main_cols {
     height: 100%; }
@@ -1218,9 +1235,9 @@ table {
 /* Custom, iPhone Retina */
 @media only screen and (min-width: 320px) and (max-width: 480px) {
   .temp_intro_body {
-    padding: 10% 5%;
-    min-height: 55vh;
-    max-height: 55vh; }
+    padding: 0 5%;
+    min-height: 45vh;
+    max-height: 45vh; }
     .temp_intro_body .temp_intro_body_hi {
       font-size: 14px; }
     .temp_intro_body .temp_intro_body_name {
@@ -1251,12 +1268,16 @@ table {
 /*==========  mainProduct.html ==========*/
 /* Custom, iPhone Retina */
 @media only screen and (min-width: 320px) and (max-width: 480px) {
-  .temp_product_body .product_body_div {
-    margin-bottom: 0; }
-    .temp_product_body .product_body_div .product_body_item .product_body_desc {
+  .temp_product_body {
+    padding: 0; }
+    .temp_product_body .product_body_div {
+      margin-bottom: 0;
       padding: 0; }
-    .temp_product_body .product_body_div .product_body_item img {
-      width: 100%; } }
+      .temp_product_body .product_body_div .product_body_item .product_body_desc {
+        padding: 0 3%;
+        width: 100%; }
+      .temp_product_body .product_body_div .product_body_item img {
+        width: 100%; } }
 /* Extra Small Devices, Phones */
 /* Small Devices, Tablets */
 @media only screen and (min-width: 767px) and (max-width: 991px) {
@@ -1282,7 +1303,8 @@ table {
 /* Custom, iPhone Retina */
 @media only screen and (min-width: 320px) and (max-width: 480px) {
   .temp_footer {
-    padding: 10% 5%; }
+    padding: 20% 5%;
+    min-height: 45vh; }
     .temp_footer .temp_footer_subscribe .temp_footer_subscribe_title {
       font-size: 18px; }
     .temp_footer .temp_footer_subscribe .temp_footer_subscribe_subtitle {
@@ -1321,9 +1343,316 @@ table {
 /* Custom, iPhone Retina */
 @media only screen and (min-width: 320px) {
   .navMenu_logo {
-    text-align: center; } }
+    text-align: center; }
+
+  .dropdown-toggle {
+    padding: 10px 15px; } }
 /* Extra Small Devices, Phones */
 /* Small Devices, Tablets */
+@media only screen and (min-width: 768px) {
+  .navbar-nav {
+    float: right;
+    margin-top: 15px; }
+    .navbar-nav li {
+      padding-top: 10px; }
+      .navbar-nav li a {
+        padding: 5px 10px; } }
+/* Medium Devices, Desktops */
+/* Large Devices, Wide Screens */
+/*==========  Non-Mobile First Method  ==========*/
+/* Large Devices, Wide Screens */
+/* Medium Devices, Desktops */
+/* Small Devices, Tablets */
+/* Extra Small Devices, Phones */
+/* Custom, iPhone Retina */
+/* Custom, iPhone Retina */
+@media only screen and (min-width: 320px) {
+  .aboutPage .aboutTitle .mission_underline {
+    margin-bottom: 4vh; }
+  .aboutPage .aboutTopDiv {
+    margin-top: 5vh; }
+    .aboutPage .aboutTopDiv .aboutRM {
+      padding: 0; }
+      .aboutPage .aboutTopDiv .aboutRM p {
+        font-size: 14px;
+        text-align: justify; }
+    .aboutPage .aboutTopDiv .aboutQuote {
+      margin-top: 5vh;
+      padding: 0; }
+      .aboutPage .aboutTopDiv .aboutQuote p {
+        text-align: justify;
+        font-size: 20px; }
+      .aboutPage .aboutTopDiv .aboutQuote .aboutName {
+        text-align: right; }
+  .aboutPage .aboutBottomDiv {
+    margin-top: 0vh; }
+    .aboutPage .aboutBottomDiv .mission_underline {
+      margin-top: 0vh; }
+    .aboutPage .aboutBottomDiv .aboutDesc {
+      padding: 15% 0; }
+      .aboutPage .aboutBottomDiv .aboutDesc .aboutDes_greeting {
+        font-size: 16px; }
+      .aboutPage .aboutBottomDiv .aboutDesc p {
+        font-size: 14px;
+        text-align: justify; } }
+/* Extra Small Devices, Phones */
+@media only screen and (min-width: 480px) {
+  .aboutPage .aboutTopDiv .aboutQuote p {
+    font-size: 25px;
+    padding-left: 20vw;
+    text-align: right; }
+  .aboutPage .aboutBottomDiv {
+    margin-top: 0; }
+    .aboutPage .aboutBottomDiv .mission_underline {
+      margin-top: 0vh; }
+    .aboutPage .aboutBottomDiv .aboutDesc .aboutDes_greeting {
+      text-align: right;
+      font-size: 20px; } }
+/* Small Devices, Tablets */
+@media only screen and (min-width: 768px) {
+  .aboutPage .aboutTopDiv {
+    min-height: 55vh; }
+    .aboutPage .aboutTopDiv .aboutQuote p {
+      font-size: 30px;
+      padding-left: 15vw; }
+  .aboutPage .aboutBottomDiv .mission_underline {
+    margin-top: 1vh; }
+  .aboutPage .aboutBottomDiv .aboutImg {
+    padding: 0; }
+  .aboutPage .aboutBottomDiv .aboutDesc {
+    padding: 0; } }
+/* Medium Devices, Desktops */
+@media only screen and (min-width: 991px) {
+  .aboutPage .aboutTopDiv {
+    padding: 3% 5% 0; }
+    .aboutPage .aboutTopDiv .aboutRM p {
+      font-size: 16px; }
+  .aboutPage .aboutBottomDiv .aboutDesc {
+    padding: 0 5%; }
+    .aboutPage .aboutBottomDiv .aboutDesc p {
+      font-size: 16px; } }
+/* Large Devices, Wide Screens */
+@media only screen and (min-width: 1200px) {
+  .aboutPage .aboutBottomDiv .aboutDesc {
+    padding: 0 5%; } }
+/*==========  Non-Mobile First Method  ==========*/
+/* Large Devices, Wide Screens */
+/* Medium Devices, Desktops */
+/* Small Devices, Tablets */
+/* Extra Small Devices, Phones */
+/* Custom, iPhone Retina */
+@media only screen and (max-width: 320px) {
+  .aboutBottomDiv {
+    margin-top: 0; }
+    .aboutBottomDiv .mission_underline {
+      margin-top: 0; } }
+/* Custom, iPhone Retina */
+@media only screen and (min-width: 320px) {
+  .blogDiv .blogDiv_card {
+    padding: 0; }
+    .blogDiv .blogDiv_card .blogDiv_title p {
+      font-size: 25px; }
+    .blogDiv .blogDiv_card .blogDiv_content {
+      padding: 0; }
+      .blogDiv .blogDiv_card .blogDiv_content p {
+        font-size: 14px;
+        text-align: justify; } }
+/* Extra Small Devices, Phones */
+@media only screen and (min-width: 480px) {
+  .blogDiv .blogDiv_card {
+    padding: 0; }
+    .blogDiv .blogDiv_card .blogDiv_title p {
+      font-size: 25px; }
+    .blogDiv .blogDiv_card .blogDiv_content {
+      padding: 0; }
+      .blogDiv .blogDiv_card .blogDiv_content p {
+        font-size: 14px;
+        text-align: justify; } }
+/* Small Devices, Tablets */
+@media only screen and (min-width: 768px) {
+  .blogDiv .blogDiv_card {
+    padding: 3% 10%; }
+    .blogDiv .blogDiv_card .blogDiv_title p {
+      font-size: 30px; }
+    .blogDiv .blogDiv_card .blogDiv_content {
+      padding: 0; }
+      .blogDiv .blogDiv_card .blogDiv_content p {
+        font-size: 18px;
+        text-align: justify; } }
+/* Medium Devices, Desktops */
+@media only screen and (min-width: 992px) {
+  .blogDiv .blogDiv_card {
+    padding: 3% 10%; }
+    .blogDiv .blogDiv_card .blogDiv_title p {
+      font-size: 30px; }
+    .blogDiv .blogDiv_card .blogDiv_content {
+      padding: 0; }
+      .blogDiv .blogDiv_card .blogDiv_content p {
+        font-size: 18px;
+        text-align: justify; } }
+/* Large Devices, Wide Screens */
+/*==========  Non-Mobile First Method  ==========*/
+/* Large Devices, Wide Screens */
+/* Medium Devices, Desktops */
+/* Small Devices, Tablets */
+/* Extra Small Devices, Phones */
+/* Custom, iPhone Retina */
+/* Custom, iPhone Retina */
+@media only screen and (min-width: 320px) {
+  .shopMenu {
+    display: none; }
+
+  .store .itemDiv {
+    margin: 0; }
+    .store .itemDiv .productDiv {
+      margin: 0;
+      padding: 0;
+      border-bottom: 1px rgba(0, 0, 0, 0.05) solid; } }
+/* Extra Small Devices, Phones */
+@media only screen and (min-width: 480px) {
+  .shopMenu {
+    display: none; }
+
+  .store .itemDiv {
+    /*margin: 0 0 40px;*/
+    height: auto;
+    min-height: 400px; }
+    .store .itemDiv .productDiv {
+      margin: 0;
+      padding: 5%;
+      border-bottom: 1px rgba(0, 0, 0, 0.05) solid;
+      min-height: 400px; } }
+/* Small Devices, Tablets */
+@media only screen and (min-width: 768px) {
+  .shopMenu {
+    display: none; }
+
+  .store .itemDiv {
+    /*margin: 0 0 40px;*/
+    height: auto;
+    min-height: 275px;
+    max-height: 275px; }
+    .store .itemDiv .productDiv {
+      margin: 0;
+      padding: 5%;
+      border-bottom: none;
+      min-height: 275px; } }
+/* Medium Devices, Desktops */
+/* Large Devices, Wide Screens */
+@media only screen and (min-width: 1200px) {
+  .store .itemDiv {
+    min-height: 300px;
+    max-height: 300px;
+    margin-bottom: 10px; } }
+/*==========  Non-Mobile First Method  ==========*/
+/* Large Devices, Wide Screens */
+/* Medium Devices, Desktops */
+/* Small Devices, Tablets */
+/* Extra Small Devices, Phones */
+/* Custom, iPhone Retina */
+/* Custom, iPhone Retina */
+@media only screen and (min-width: 320px) {
+  .pDiv {
+    min-height: 125vh;
+    max-height: 150vh;
+    overflow: scroll; }
+
+  .pDiv_container .pDiv_images_container {
+    padding: 0; }
+    .pDiv_container .pDiv_images_container .pDiv_subImg {
+      display: none; }
+  .pDiv_container .pDiv_desc_container {
+    padding: 0;
+    padding-top: 5%;
+    text-align: center; }
+    .pDiv_container .pDiv_desc_container .pDiv_des_title {
+      padding: 0; }
+      .pDiv_container .pDiv_desc_container .pDiv_des_title p {
+        font-size: 16px !important; }
+    .pDiv_container .pDiv_desc_container .pDiv_des_price {
+      padding: 0; }
+      .pDiv_container .pDiv_desc_container .pDiv_des_price p {
+        font-size: 16px; }
+    .pDiv_container .pDiv_desc_container .pDiv_des_detail {
+      padding: 0 !important; }
+      .pDiv_container .pDiv_desc_container .pDiv_des_detail p {
+        font-size: 16px;
+        text-align: justify !important; }
+    .pDiv_container .pDiv_desc_container .pDiv_des_btns {
+      padding: 0; } }
+/* Extra Small Devices, Phones */
+/* Small Devices, Tablets */
+@media only screen and (min-width: 768px) {
+  .pDiv {
+    min-height: 125vh;
+    max-height: 150vh;
+    overflow: scroll; }
+
+  .pDiv_container .pDiv_images_container {
+    padding: 0; }
+    .pDiv_container .pDiv_images_container .pDiv_subImg {
+      display: none; }
+  .pDiv_container .pDiv_desc_container {
+    padding: 0 0 0 5%;
+    text-align: center; }
+    .pDiv_container .pDiv_desc_container .pDiv_des_title {
+      padding: 0; }
+      .pDiv_container .pDiv_desc_container .pDiv_des_title p {
+        font-size: 16px !important; }
+    .pDiv_container .pDiv_desc_container .pDiv_des_price {
+      padding: 0; }
+      .pDiv_container .pDiv_desc_container .pDiv_des_price p {
+        font-size: 16px; }
+    .pDiv_container .pDiv_desc_container .pDiv_des_detail {
+      padding: 0 !important; }
+      .pDiv_container .pDiv_desc_container .pDiv_des_detail p {
+        font-size: 14px !important;
+        text-align: justify !important; }
+    .pDiv_container .pDiv_desc_container .pDiv_des_btns {
+      padding: 0; } }
+/* Medium Devices, Desktops */
+/* Large Devices, Wide Screens */
+/*==========  Non-Mobile First Method  ==========*/
+/* Large Devices, Wide Screens */
+/* Medium Devices, Desktops */
+/* Small Devices, Tablets */
+/* Extra Small Devices, Phones */
+/* Custom, iPhone Retina */
+/* Custom, iPhone Retina */
+@media only screen and (min-width: 320px) {
+  .table-responsive {
+    overflow-x: auto; } }
+/* Extra Small Devices, Phones */
+/* Small Devices, Tablets */
+/* Medium Devices, Desktops */
+/* Large Devices, Wide Screens */
+/*==========  Non-Mobile First Method  ==========*/
+/* Large Devices, Wide Screens */
+/* Medium Devices, Desktops */
+/* Small Devices, Tablets */
+/* Extra Small Devices, Phones */
+/* Custom, iPhone Retina */
+/* Custom, iPhone Retina */
+@media only screen and (min-width: 320px) {
+  #form-container {
+    top: 4vh !important; }
+
+  .email-group {
+    padding: 0 15px !important; }
+
+  .shipping-add {
+    padding: 0; }
+
+  .shippingRate {
+    font-size: 16px !important; }
+
+  .paymentForm {
+    padding: 0; } }
+/* Extra Small Devices, Phones */
+/* Small Devices, Tablets */
+@media only screen and (min-width: 768px) {
+  .apt-etc {
+    font-size: 12px !important; } }
 /* Medium Devices, Desktops */
 /* Large Devices, Wide Screens */
 /*==========  Non-Mobile First Method  ==========*/
@@ -1532,12 +1861,14 @@ pre {
   padding: 10px; }
 
 .card-column {
+  padding-top: 10px;
   border-top: 1px solid rgba(244, 244, 244, 0.44);
   border-left: 1px solid rgba(244, 244, 244, 0.44);
   border-right: 1px solid rgba(244, 244, 244, 0.44); }
 
 .pf-orderDetails {
   /*padding: 0;*/
+  padding-top: 10px;
   border-top: 1px solid rgba(244, 244, 244, 0.44);
   border-left: 1px solid rgba(244, 244, 244, 0.44);
   border-right: 1px solid rgba(244, 244, 244, 0.44); }

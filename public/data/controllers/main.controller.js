@@ -10,16 +10,21 @@ function MainController($scope,firebase, $firebaseArray) {
   	}
 
 	$scope.subscribe = function(email){
-		var emailData = {email: email};
-		var subscrips = firebase.database().ref().child("subscriptions");
-		var newPostKey = subscrips.push().key;
-		var updates = {};
-			emailData.id = newPostKey;
-		  	updates['/subscriptions/' + newPostKey] = emailData;
-		  	this.email = '';
-	  	
-		swal("Got it!", "Look for a newsletter soon!", "success");
-	  	return firebase.database().ref().update(updates);
+		if(email ==''){
+			swal("Sorry!", "Looks like you didn't leave an email address", "error");
+		}else{
+			var emailData = {email: email};
+			var subscrips = firebase.database().ref().child("subscriptions");
+			var newPostKey = subscrips.push().key;
+			var updates = {};
+				emailData.id = newPostKey;
+			  	updates['/subscriptions/' + newPostKey] = emailData;
+			  	this.email = '';
+		  	
+			swal("Got it!", "Look for a newsletter soon!", "success");
+		  	return firebase.database().ref().update(updates);
+			
+		}
 	}
 
 

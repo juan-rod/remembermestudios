@@ -27,36 +27,36 @@
 
 <div class="shipping-add  col-lg-12 col-md-12 col-sm-12 col-xs-12">
 	<h3>Shipping Address</h3>
-	<div class="form-group  col-lg-6 col-md-6 col-sm-6 col-xs-6">
+	<div class="form-group  col-lg-6 col-md-6 col-sm-6 col-12">
 	    <label for="name">First Name </label>
 	    <input type="text" class="form-control" name="fname" data-stripe="name"  ng-model="formData.fname" ng-change="checkIfUser(formData.email)" required>
 	</div>
-	<div class="form-group  col-lg-6 col-md-6 col-sm-6 col-xs-6">
+	<div class="form-group  col-lg-6 col-md-6 col-sm-6 col-12">
 	    <label for="name"> Last Name</label>
 	    <input type="text" class="form-control" data-stripe="name" name="lname" ng-model="formData.lname" required>
 	</div>
-	<div class="form-group col-lg-9 col-md-9 col-sm-9 col-xs-9 ">
+	<div class="form-group col-lg-9 col-md-9 col-sm-9 col-xs-12 ">
 	    <label for="address">Address</label>
 	    <input type="text" class="form-control" data-stripe="address_line1" name="address" ng-model="formData.address" required>
 	</div>
-	<div class="form-group col-lg-3 col-md-3 col-sm-3 col-xs-3 ">
-	    <label for="address2">Apt, Suite, etc.</label>
+	<div class="form-group col-lg-3 col-md-3 col-sm-3 col-xs-12 ">
+	    <label for="address2" class="apt-etc">Apt, Suite, etc.</label>
 	    <input type="text" class="form-control" placeholder="(optional)"  name="address_line2" data-stripe="address_line2" ng-model="formData.address_line2">
 	</div>
 	<div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
 	    <label for="city">City</label>
 	    <input type="text" class="form-control" data-stripe="address_city" ng-model="formData.city">
 	</div>
-	<div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-4 ">
+	<div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-12 ">
 	    <label for="country">Country</label>
 	    <input type="text" class="form-control" data-stripe="address_country" value="United States" ng-model="formData.country" disabled>
 	</div>
-	<div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-4 ">
+	<div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-12 ">
 		<!-- <state-dropdown></state-dropdown> -->
 	    <label for="state">State</label>
 	    <input type="text" class="form-control" data-stripe="address_state" ng-model="formData.state" required>
 	</div>
-	<div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-4 ">
+	<div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-12 ">
 	    <label for="email">Zip</label>
 	    <input type="text" class="form-control" data-stripe="address_zip" ng-model="formData.zip" required>
 	</div>

@@ -1,13 +1,13 @@
 
 <div class="form-group shipping-formgroup">
     <div class="shipping_add  row" ng-model="formData">
-        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 shippingForm_title">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-10 shippingForm_title">
             <p>Shipping Address</p>
         </div>
-        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 shippingForm_title">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-2 shippingForm_title">
             <a ui-sref="checkoutForm.customer"> <p>Edit</p></a>
         </div>
-        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 shippingForm_address ">
+        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12 shippingForm_address ">
             <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 {{formData.fname}}
                 {{formData.lname}}
@@ -32,10 +32,10 @@
     </div>
 </div>
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 shippingRate ">
-    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-10">
             Flat Shipping Fee
         </div>
-        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-2">
             {{ shipping | currency }}
         </div>
 </div>
