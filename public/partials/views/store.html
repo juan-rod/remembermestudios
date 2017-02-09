@@ -1,6 +1,6 @@
 <main-nav-bar></main-nav-bar>
 <shop-nav-bar></shop-nav-bar>
-  <div class="store " ng-controller="ShopController as vm">
+  <div class="store " ng-controller="ShopController as vm" id="navChange" nav-scroll>
     <div
       class="col-lg-4 col-md-4 col-sm-4 col-xs-12 itemDiv " 
       ng-repeat="item in store | orderBy:'name' | filter:search">

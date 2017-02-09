@@ -7,7 +7,6 @@ function mvAdmin($http, $q,firebase, $firebaseArray) {
 
   return {
     createProduct: function(file,product){
-    	console.log("files:",file);
     	var random = parseInt(Math.random() * 1000000);
     	var randomString = random.toString();
 		var refStorage = storageService.ref('product_images').child(randomString);

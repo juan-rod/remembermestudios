@@ -1,2 +1,18 @@
-<post-blog></post-blog>
-<add-product></add-product>
+<!-- <post-blog></post-blog>
+<add-product></add-product> -->
+
+<div class="row">
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 border">
+	    <div id="form-container border2">
+	        <div class="text-center border3">
+	            <h2>Dashboard</h2>
+	            <div id="status-buttons" class="text-center">
+	                <a ui-sref-active="active" ui-sref=".product"><span>1</span> product</a>
+	                <a ui-sref-active="active" ui-sref=".blog"><span>2</span> blog</a>
+	            </div>
+	        </div>
+	        	<span class="alert alert-danger hidden"></span>
+	        <div id="form-views" class="border" ui-view></div>
+	    </div>
+	</div>
+</div>

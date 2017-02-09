@@ -1,29 +1,24 @@
 
 <div class="temp_main_body col-lg-12 col-md-12 col-sm-12 col-xs-12">
-	<div class="row">
-		<a href="#blog">
-			<div class="temp_main_cols temp_main_blog col-lg-8 col-md-8 col-sm-12 col-xs-12">
-				<div class="temp_main_blog_title">
-					<p>Remembering What Matters</p>
-					<p class="temp_main_subtitle">Read More</p>
-				</div>
-				<img class="blogImg" src="../images/about/writing.jpg">
+	<a href="#blog">
+		<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 mainBdiv">
+			<div class="temp_main_blog_title">
+				<p>Remembering What Matters</p>
+				<p class="temp_main_subtitle">Read More</p>
 			</div>
-		</a>
-		<div class="temp_main_cols temp_main_products col-lg-4 col-md-4 col-sm-12 col-xs-12">
-			<div class="row">
-				<div class="temp_main_products_div temp_main_products_top col-lg-12 col-md-12 col-sm-12 col-xs-12" ng-repeat="item in store | orderBy:'name' | filter:search | limitTo: 2">
-					
-					<a ui-sref="productDetail({ id: item.$id })">
-						<div class="temp_main_products_title">
-							<p>{{item.title}}</p>
-							<p class="temp_main_subtitle">Shop Now</p>
-						</div>
-						<img ng-src="{{item.url}}">
-					</a>
+			<img class="" src="../images/about/writing.jpg">
+		</div>
+	</a>
+	<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 mainPdiv">
+		<div class="col-lg-12 col-md-12 col-sm-6 col-xs-6  mainPdiv-item" ng-repeat="item in store | orderBy:'name' | filter:search | limitTo: 2">
+			
+			<a ui-sref="productDetail({ id: item.$id })">
+				<div class="temp_main_products_title">
+					<p>{{item.title}}</p>
+					<p class="temp_main_subtitle">Shop Now</p>
 				</div>
-				
-			</div>
+				<img ng-src="{{item.url}}">
+			</a>
 		</div>
 	</div>
 </div>

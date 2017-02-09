@@ -1,3 +1,14 @@
+.red{
+  border-color: #e7e7e7 !important;
+  /*background-color: red;*/
+  height: 60px;
+  transition:0.5s all ease; 
+    -moz-transition:0.5s all ease; 
+    -webkit-transition:0.5s all ease; 
+}
+.navbar-default{
+  border-color: transparent;
+}
   #navMenu_contact{
     position: absolute;
     right: 0;

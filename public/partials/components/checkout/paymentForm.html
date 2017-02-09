@@ -50,33 +50,32 @@
 		</div>
 	</div>
 </div>
+
 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 card-column">
-   <!--  <form action="/checkout" method="POST" id="payment-form" ng-submit="submitPayment($event)">  -->
+ 
 	  
 	  <div class="form-row">
 	    <label for="cardNumber">Card Number</label>
-	    <input type="text" id="card-number" class="form-control" data-stripe="number" required>
+	    <input type="tel" id="card-number" class="form-control" placeholder=""data-stripe="number" required>
 	    <label for="cardNumber">Name on Card</label>
 	    <input type="text" id="card-name" class="form-control" data-stripe="name" required>
 	  </div>
 
 	  <div class="form-row">
 	  	<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 exp-div">
-		    <label for="expiration">Expiration (MM/YY)</label>
-		     	<input type="text" id="card-exp-month"  class="form-control" data-stripe="exp_month" required>
+		    <label for="expiration">Expiration</label>
+		     	<input type="tel" id="card-exp-month"  class="form-control" placeholder="MM" data-stripe="exp_month" required>
 		    	<span> / </span>
-		    	<input type="text" id="card-exp-year" class="form-control" data-stripe="exp_year" required>
+		    	<input type="tel" id="card-exp-year" class="form-control" placeholder="YY" data-stripe="exp_year" required>
 	  	</div>
 	  	<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 exp-div">
 		    <label for='cvc'>CVC</label>
-		      <input type="text" id="card-cvc" class="form-control" data-stripe="cvc" required>
+		      <input type="tel" id="card-cvc" class="form-control" data-stripe="cvc" required>
 	  	</div>
 	  </div>
 
 	 
-	  	<!-- <input type="submit" class="submit payment-submit" value="Submit Payment"> -->
-	 
-	<!-- </form> -->
+	  	
 
 </div>
 

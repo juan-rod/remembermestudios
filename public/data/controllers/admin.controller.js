@@ -17,12 +17,7 @@ function AdminController(firebase, $location, $scope, $firebaseArray, $state, $s
     
     this.image = function(event){
   		event.preventDefault();
-    	// var file = event.target.files[0];
     	var file = event.target.files;
-  		// for (var i = 0; i < file.length; i++) {
-    //     	var imageFile = file[i];
-
-   	// 	 }
   		mvAdmin.createProduct(file,$scope.product).then(function(ref){
   			$scope.product.title= '';
 			$scope.product.description='';
@@ -30,8 +25,6 @@ function AdminController(firebase, $location, $scope, $firebaseArray, $state, $s
 			file = '';
 			swal("Success", "Your image has been upload", "success");
   		});
-  		// uploadImage(file);
-  		
   	};
   	
    	function editProduct(id){
@@ -80,7 +73,7 @@ function AdminController(firebase, $location, $scope, $firebaseArray, $state, $s
  		auth.signInWithEmailAndPassword(email, password).then(function(firebaseUser) {
  			 // $location.path( "/adminConsole" ).replace();
  			 // $state.go('.adminConsole', $stateParams, {reload: true, inherit: false});
- 			 $state.go('.adminConsole' );
+ 			 $state.go('adminConsole' );
  			 $scope.$apply();
 		}).catch(function(error) {
   			console.error("Authentication failed:", error);

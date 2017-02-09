@@ -16,6 +16,9 @@
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) {
+	.navContainer{
+   	 	padding: 0 10%;
+    }
 	.navbar-nav {
 	    float: right;
 	    margin-top: 15px;
@@ -30,12 +33,16 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px) {
-
+	.navContainer{
+   	 	padding: 0 3%;
+    }
 }
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px) {
-
+    .navContainer{
+   	 	padding: 0 10%;
+    }
 }
 
 

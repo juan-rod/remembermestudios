@@ -6,7 +6,10 @@ body{
 pre{ 
 	margin-bottom:20px; 
 }
-
+.cart-empty{
+	position: relative;
+	top: 12vh;
+}
 /* form styling */
 #form-container{ 
 	background:#C1C0C0; 
@@ -128,6 +131,9 @@ pre{
 	border-top: 1px solid rgba(244, 244, 244, 0.44);
 	border-left: 1px solid rgba(244, 244, 244, 0.44);
 	border-right: 1px solid rgba(244, 244, 244, 0.44);
+	border-bottom: 1px solid rgba(244, 244, 244, 0.44);
+    padding: 5%;
+    background: ghostwhite;
 }
 .pf-orderDetails{
 	/*padding: 0;*/

@@ -11,7 +11,6 @@
 @import "partials/mainBodyNav";
 @import "partials/productModal";
 @import "partials/cart";
-@import "partials/carousel";
 @import "partials/temp";
 @import "partials/product";
 @import "partials/mediaQ/temp";
@@ -24,6 +23,7 @@
 @import "partials/mediaQ/checkout";  
 @import "partials/login";  
 @import "partials/checkout";  
+@import "partials/expand";  
 
 body{
 	background-color: $bg-color;
@@ -33,9 +33,9 @@ body{
   	/*overflow: hidden;*/
 }
 
-::-webkit-scrollbar { 
+/*::-webkit-scrollbar { 
     display: none; 
-}
+}*/
 /*//////////////////////////////////////*/
 /*///// borders /////// */
 .border {

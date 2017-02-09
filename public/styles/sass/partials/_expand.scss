@@ -1,0 +1,17 @@
+.large {
+    cursor: -moz-zoom-in; 
+    cursor: -webkit-zoom-in; 
+    cursor: zoom-in;
+    position: absolute;
+    -webkit-transition: all 0.25s ease-out;
+    transition: all 0.25s ease-out;
+}
+
+.expanded {
+    cursor: -moz-zoom-out; 
+    cursor: -webkit-zoom-out; 
+    cursor: zoom-out;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100%;
+}

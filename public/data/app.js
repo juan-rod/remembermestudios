@@ -77,6 +77,14 @@
             url: '/adminConsole',
             templateUrl: '/partials/admin/admin.console.html'
         })
+        .state('adminConsole.blog',{
+            url:'/blog',
+            templateUrl:'/partials/admin/components/admin.postBlog.html'
+        })
+        .state('adminConsole.product',{
+            url:'/product',
+            templateUrl:'/partials/admin/components/admin.addProduct.html'
+        })
 
         .state('checkoutForm', {
             url: '/checkout',
