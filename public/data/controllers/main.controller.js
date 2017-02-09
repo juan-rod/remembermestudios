@@ -26,6 +26,7 @@ function MainController($scope,firebase, $firebaseArray) {
 			
 		}
 	}
+	$('[data-toggle="tooltip"]').tooltip();
 
 
 }

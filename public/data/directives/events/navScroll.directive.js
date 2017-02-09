@@ -7,7 +7,6 @@ function navScroll($window, $timeout) {
 			var navbar = angular.element(document.querySelector('#navbar')),
 			    mainheader = angular.element(document.querySelector('#navChange')),
 				navbar_height = navbar[0].offsetHeight,
-				mainheader_height = mainheader[0].offsetHeight,
 				fix_class = 'red',
 				scroll_top = document.body.scrollTop ;
 

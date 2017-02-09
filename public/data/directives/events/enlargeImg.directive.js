@@ -12,7 +12,6 @@ function enlarge($window) {
         restrict: 'A',
         
         link: function (scope, element, attr) {
-          console.log("element:",element);
                 var expanded = false,
                     cloned = element.clone(true),
                     offset = getElementOffset(element[0]);
