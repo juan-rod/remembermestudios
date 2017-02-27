@@ -1,0 +1,38 @@
+.footer{
+	height:50px;
+	background-color: #D4D4D4;
+	padding: 1% 3%;
+    color: rgba(255, 255, 255, 0.94);
+
+	.col1{
+		font-weight: 100;
+		
+	}
+	.col2{
+		font-weight: 100;
+		
+	}
+	.col3{
+
+	}
+}
+@media only screen and (min-width : 320px) {
+	.footer{
+		height:100px;
+	}
+}
+@media only screen and (min-width : 768px) {
+	.footer{
+		height:50px;
+	}
+}
+@media only screen and (min-width : 991px) {
+	.footer{
+		height:50px;
+	}
+}
+@media only screen and (min-width : 1200px) {
+	.footer{
+		height:50px;
+	}
+}
