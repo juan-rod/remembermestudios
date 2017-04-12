@@ -32,6 +32,10 @@ function ShopController($scope, $routeParams, firebase, $firebaseArray, ngCart, 
       console.log("email,password:",email,password);
     }
 
+    $scope.login = function(){
+      swal("Oops!", "Purchase options are coming soon!", "success");
+    }
+
     $scope.submitPayment = function(e){
       var $form = {
         cvc: $('#card-cvc').val(),

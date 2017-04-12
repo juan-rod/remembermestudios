@@ -3,17 +3,22 @@ var Order = require('../models/Order');
 
 // Get the credit card details submitted by the form
 	exports.checkout = function(req,res){
+
 		var amount = req.body.price * 100;
 		var token = req.body.stripeToken; // Using Express
+		var body = req.body;
 		 console.log("token from server?:",token);
 		 console.log("amount:",amount);
 		 console.log("what's in req.body:", req.body);
+		 var keyName1=req.body.key;
+			console.log(keyName1);
 
 		var charge = stripe.charges.create({
 		  amount: amount, // Amount in cents
+		  bodee:body,
 		  currency: "usd",
 		  source: token,
-		  description: "Example charge"
+		  description: req.body
 		}, function(err, charge) {
 		  if (err && err.type === 'StripeCardError') {
 		    	// The card has been declined

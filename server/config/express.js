@@ -4,18 +4,13 @@ var express = require('express'),
 	bodyParser = require('body-parser'),
 	passport = require('passport'),
 	session = require('express-session');
+	
 
 // var csrfProtection = csrf();
 module.exports = function(app, config){
 	require('./passport')(passport);
-	// function compile(str,path){
-	// 	return stylus(str).set('filename',path);
-	// }
-
+	// app.use('/sayHello', app);
 	app.set('public', config.rootPath + '/public');
-	// app.set('view engine', 'html');
-	// app.engine('html', require('ejs').renderFile);
-	// app.set('views', path.join(__dirname, 'views'));
 	app.set('view engine', 'ejs');
 	app.use(cookieParser());
 	app.use(session({secret: 'supersecret', resave: false, saveUninitialized:false}));

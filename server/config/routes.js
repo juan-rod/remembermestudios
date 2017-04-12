@@ -1,14 +1,11 @@
 var	mongoose = require('mongoose'),
 	payment = require('../controllers/payment'),
-	// csrf = require('csurf'),
-	// auth = require('./auth'),
-	// User = mongoose.model('User'),
-	// users = require('../controllers/users'),
+	email = require('../controllers/email'),
 	passport = require('passport');
-
-// var csrfProtection = csrf();
+	// router = express.Router();
 module.exports = function(app){
 	// app.use(csrfProtection);
+	app.post('/',email.handleSayHello);
 
 	// app.get('/api/users', auth.requiresRole('admin'), users.getUsers);
 	// app.post('/api/users', users.createUser);
